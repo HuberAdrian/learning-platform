@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
 
 function App() {
   // make a homepage for a learning platform with a navbar, a sidebar, login and signup buttons, a footer and a main content area with a scrollable list of courses
