@@ -45,7 +45,7 @@ make the footer have a height of 100px
 make the footer have a width of 100%
 make the footer have a display of flex
 */
-footer {
+.footer {
   position: sticky;
   bottom: 0;
   background-color: black;
@@ -53,17 +53,34 @@ footer {
   height: 100px;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
+  bottom: 0;
 }
-/* make the footer links white and flex */
-footer a {
+
+.footer a {
+  margin: 0 10px;
   color: white;
   display: flex;
   justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer a:hover {
+  color: #61dafb;
 }
 
 /* make the copywrite text centered  */
-footer p {
+.footer div {
   text-align: center;
+  margin: 0 10px;
+  font-size: 1.5rem;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+}
+

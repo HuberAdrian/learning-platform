@@ -1,25 +1,17 @@
 import React from 'react'
 
-    // create a footer component with a logo, copyright and links to login and signup pages
-    // make the footer sticky to the bottom of the page
-    // make the footer responsive
-    // make the footer black with white text
-    // make the footer have a height of 100px
-    // make the footer have a width of 100%
-    // make the footer have a display of flex
-
-//import css from App.css
-import './App.css';
-
-    function Footer() {
+function Footer() {
         return (
             <div className='footer' >
-                <div className='footerLogo'>logo</div>
-                <div >© 2021</div>
-                <div>login</div>
-                <div>signup</div>
+                <a hreft='home'>Startseite</a>
+                <a href='about'>Kurse</a>
+                <a href='Preise'>Preise</a>
+                <div className='copyright' >© 2022</div>
+                <a href='login' >login</a>
+                <a href='signup' >Registrieren</a>
+                <a href='signup' >Datenschutz</a>
             </div>
         )
         }
 
-    export default Footer
+export default Footer    
