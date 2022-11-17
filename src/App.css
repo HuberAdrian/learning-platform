@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+/*
+make the footer sticky to the bottom of the page
+make the footer responsive
+make the footer black with white text
+make the footer have a height of 100px
+make the footer have a width of 100%
+make the footer have a display of flex
+*/
+footer {
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  color: white;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* make the footer links white and flex */
+footer a {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+/* make the copywrite text centered  */
+footer p {
+  text-align: center;
+}
