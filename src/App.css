@@ -50,14 +50,17 @@ make the footer have a display of flex
   bottom: 0;
   background-color: black;
   color: white;
-  height: 100px;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   bottom: 0;
-  flex-wrap: wrap;
+  height: fit-content;
 }
+
+
+
+/* CSS for footer */
 
 .footer a {
   margin: 0 10px;
@@ -66,22 +69,32 @@ make the footer have a display of flex
   justify-content: center;
   text-decoration: none;
   font-size: 1.5rem;
+  margin: 5px 10px;
 }
 
 .footer a:hover {
   color: #61dafb;
 }
 
-/* make the copywrite text centered  */
 .footer div {
   text-align: center;
-  margin: 0 10px;
+  margin: 5px 10px;
   font-size: 1.5rem;
 }
 
-@media (max-width: 768px) {
+.footer div:nth-child(2) {
+  margin: 0 10px;
+}
+
+@media (min-width: 768px) {
   .footer {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 110px;
+  }
+  .footer>div { 
+    order: 2;
+    flex: 1 1 100%;
   }
 }
 
