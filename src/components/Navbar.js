@@ -1,12 +1,23 @@
 import React from 'react'
+// import image 
+import gear from '.././images/gear.png'
 
 function Navbar() {
     // create a navbar component with a logo, a login button and a signup button
 
-    
 
   return (
-    <div>Navbar</div>
+
+    <div className='navbar' >
+        <div className='logo' >
+            <img src={gear} alt='logo' />
+        </div>
+        <a href='home'>Startseite</a>
+        <a href='about'>Kurse</a>
+        <a href='Preise'>Preise</a>
+        <button className='login' >Login</button>
+        <button className='signup' >Registrieren</button>
+    </div>
   )
 }
 

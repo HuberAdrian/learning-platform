@@ -50,3 +50,61 @@
   }
 }
 
+/* ------------------- CSS for Navbar ---------------------- */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 0 10px;
+  height: 60px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 5px 10px;
+  color: black;
+}
+.navbar a:hover {
+  color: #61dafb;
+}
+
+.navbar div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  margin: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* make button round */
+
+
+.navbar button:hover {
+  color: #61dafb;
+}
+
+/* increase thighness of font */
+
+.navbar button {
+  font-weight: bold;
+}
+
+/* make logo an animated gear wheel */
+
+.navbar img {
+  animation: spin 2s linear infinite;
+  height: 40px;
+  width: 40px;
+}
