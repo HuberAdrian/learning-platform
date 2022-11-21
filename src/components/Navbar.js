@@ -12,11 +12,14 @@ function Navbar() {
         <div className='logo' >
             <img src={gear} alt='logo' />
         </div>
+
+        <div className='links' >
         <a href='home'>Startseite</a>
         <a href='about'>Kurse</a>
         <a href='Preise'>Preise</a>
         <button className='login' >Login</button>
         <button className='signup' >Registrieren</button>
+        </div>
     </div>
   )
 }

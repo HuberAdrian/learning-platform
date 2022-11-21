@@ -117,3 +117,30 @@
     transform: rotate(360deg);
   }
 }
+
+/* make the navbar stop growing when the screen is too big */
+
+@media (min-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    height: 110px;
+    margin: 0 30px;
+  }
+
+}
+
+/* add hamburger menu */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 100%;
+  }
+  .navbar div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar button {
+    margin: 5px 0;
+  }
+}
