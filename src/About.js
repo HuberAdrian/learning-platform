@@ -6,7 +6,7 @@ function About() {
         <div>
         <h1>About Us</h1>
         <p>We are a team of mechanical engineers that are here to help you learn about mechanical engineering</p>
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F313421892", alt="mechanical engineer" />
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F313421892" alt="mechanical engineer" />
         <button>Learn More</button>
         <button>Sign up</button>
         </div>

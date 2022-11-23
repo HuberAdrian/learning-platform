@@ -1,6 +1,9 @@
 import React from 'react'
 import Footer from './components/Footer'
 // import Navbar from './components/Navbar'
+import Courses from './Courses'
+import Pricing from './Pricing'
+import About from './About'
 
 function Home() {
 
