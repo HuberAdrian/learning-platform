@@ -175,18 +175,26 @@
   margin: 10px 0;
 }
 
-/* make pricing cards responsive */
-
 @media (min-width: 768px) {
-  .pricing {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
 
   .pricing__container {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
   }
+}
+
+/* give pricing cards a border with a border radius and change the colour inside */
+
+.pricing__card {
+  border: 1px solid #61dafb;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
