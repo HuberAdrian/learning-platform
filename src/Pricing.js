@@ -56,28 +56,33 @@ function Pricing() {
             </div>
             <div className="pricing__overview">
                 <h1>Pricing Overview</h1>
-                <table>
+                <table className='pricing__table'>
                     <tr>
+                        <th></th>
                         <th>Basic</th>
                         <th>Standard</th>
                         <th>Premium</th>
                     </tr>
                     <tr>
+                        <th>Pricing</th>
                         <td>$9.99</td>
                         <td>$19.99</td>
                         <td>$29.99</td>
                     </tr>
                     <tr>
+                        <th>Courses</th>
                         <td>10 Courses</td>
                         <td>20 Courses</td>
                         <td>30 Courses</td>
                     </tr>
                     <tr>
+                        <th>Prüfungsvorbereitung</th>
                         <td>10 Projects</td>
                         <td>20 Projects</td>
                         <td>30 Projects</td>
                     </tr>
                     <tr>
+                        <th>Quizzes</th>
                         <td>10 Quizzes</td>
                         <td>20 Quizzes</td>
                         <td>30 Quizzes</td>
