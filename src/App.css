@@ -144,3 +144,49 @@
     margin: 5px 0;
   }
 }
+
+/* ------------------- CSS for Pricing ---------------------- */
+
+.pricing__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.pricing h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.pricing h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.pricing h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.pricing h4 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* make pricing cards responsive */
+
+@media (min-width: 768px) {
+  .pricing {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .pricing__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
