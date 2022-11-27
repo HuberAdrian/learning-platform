@@ -2,8 +2,8 @@ import React from 'react'
 
 function Pricing() {
 
-    // make a pricing page with three different pricing options for the plans and a button to signup for the plans
-    // every pricing option should have a header, a short list with courses that are included in a plan, a button to signup for the plans
+    // add a pricing page with a button to signup
+    // make an tabular overview of the pricing for the courses with comparison
 
     return (
         <div className="pricing">
@@ -54,7 +54,37 @@ function Pricing() {
                     </div>
                 </div>
             </div>
-        </div>
+            <div className="pricing__overview">
+                <h1>Pricing Overview</h1>
+                <table>
+                    <tr>
+                        <th>Basic</th>
+                        <th>Standard</th>
+                        <th>Premium</th>
+                    </tr>
+                    <tr>
+                        <td>$9.99</td>
+                        <td>$19.99</td>
+                        <td>$29.99</td>
+                    </tr>
+                    <tr>
+                        <td>10 Courses</td>
+                        <td>20 Courses</td>
+                        <td>30 Courses</td>
+                    </tr>
+                    <tr>
+                        <td>10 Projects</td>
+                        <td>20 Projects</td>
+                        <td>30 Projects</td>
+                    </tr>
+                    <tr>
+                        <td>10 Quizzes</td>
+                        <td>20 Quizzes</td>
+                        <td>30 Quizzes</td>
+                    </tr>
+                </table>
+             </div>
+    </div>
     )
 }
 
