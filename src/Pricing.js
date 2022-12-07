@@ -11,9 +11,9 @@ function Pricing() {
                 <div className="pricing__card">
                     <div className="pricing__cardInfo">
                         <div className="info__header">
-                            <h3>Basic</h3>
+                            <h3>Basis</h3>
                             <h4>$9.99</h4>
-                            <p>per month</p>
+                            <p>pro Monat / Azubi</p>
                         </div>
                         <ul className="info__ul">
                             <li>10 Courses</li>
@@ -28,7 +28,7 @@ function Pricing() {
                         <div className="info__header">
                             <h3>Standard</h3>
                             <h4>$19.99</h4>
-                            <p>per month</p>
+                            <p>pro Monat / Azubi</p>
                         </div>
                         <ul className="info__ul">
                             <li>20 Courses</li>
@@ -43,7 +43,7 @@ function Pricing() {
                         <div className="info__header">
                             <h3>Premium</h3>
                             <h4>$29.99</h4>
-                            <p>per month</p>
+                            <p>pro Monat / Azubi</p>
                         </div>
                         <ul className="info__ul">
                             <li>30 Courses</li>
