@@ -20,7 +20,7 @@ function Pricing() {
                             <li>10 Projects</li>
                             <li>10 Quizzes</li>
                         </ul>
-                        <button className="pricing__button">Sign Up</button>
+                        <button className="pricing__button">Mehr></button>
                     </div>
                 </div>
                 <div className="pricing__card">
