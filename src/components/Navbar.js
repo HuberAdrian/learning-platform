@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 import './../App.css'
+import { HashLink } from 'react-router-hash-link';
 
 
 
@@ -33,35 +34,35 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#fff' }}>
        <div className='navbar'>
          <div className='navbar-container container'>
-           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+           <HashLink to='/#home' className='navbar-logo' onClick={closeMobileMenu}>
              TRVL <i className='fab fa-typo3' />
-           </Link>
+           </HashLink>
            <div className='menu-icon' onClick={handleClick}>
              {click ? <FaTimes /> : <FaBars />}
            </div>
            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
              <li className='nav-item'>
-               <Link to='' className='nav-links' onClick={closeMobileMenu}>
+               <HashLink smooth to='/#home' className='nav-links' onClick={closeMobileMenu}>
                  Home
-               </Link>
+               </HashLink>
              </li>
               <li className='nav-item'>
-               <Link
-                 to='/services'
+               <HashLink
+                 smooth to='/#courses'
                  className='nav-links'
                  onClick={closeMobileMenu}
                >
-                 Services
-               </Link>
+                 Kurse
+               </HashLink>
               </li>
               <li className='nav-item'>
-               <Link
-                 to='/products'
+               <HashLink
+                 smooth to='/#about'
                  className='nav-links'
                  onClick={closeMobileMenu}
                >
-                 Products
-               </Link>
+                 Über uns
+               </HashLink>
               </li>
               <li className='nav-btn'>
                 {button ? (
@@ -69,7 +70,7 @@ function Navbar() {
                    <Button buttonStyle='btn--outline'>SIGN UP</Button>
                  </Link>
                  ) : (
-                   <Link
+                   <HashLink
                      to='/sign-up'
                      className='btn-link'
                      onClick={closeMobileMenu}
@@ -80,7 +81,7 @@ function Navbar() {
                      >
                        SIGN UP
                      </Button>
-                   </Link>
+                   </HashLink>
                  )}
               </li>
             </ul>
