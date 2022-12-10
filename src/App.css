@@ -2,7 +2,6 @@
 /* ------------------- CSS for footer ---------------------- */
 
 .footer {
-  position: sticky;
   bottom: 0;
   background-color: black;
   color: white;
@@ -58,77 +57,174 @@ make the navbar sticky
 make the navbar transparent when the user scrolls down
 make the navbar opaque when the user scrolls up
 write css for this navbar
+make list items inline if the screen is large enough
 */
 
 .navbar {
   position: sticky;
   top: 0;
   background-color: transparent;
-  color: white;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-.navbar__logo {
-  font-size: 2rem;
-  margin: 10px 0;
-}
-
-.navbar__links {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: 10px 0;
+  padding: 10px;
+  z-index: 1;
+  background-color: gray;
 }
 
-.navbar__links a {
-  margin: 0 10px;
+.nav-logo {
+  font-size: 2rem;
   color: white;
   text-decoration: none;
-  font-size: 1.5rem;
+  margin: 0 10px;
 }
 
-.navbar__links a:hover {
+.nav-logo:hover {
   color: #61dafb;
 }
 
-.navbar__button {
-  margin: 10px 0;
-  padding: 10px 20px;
-  border: 1px solid #61dafb;
-  border-radius: 20px;
-  background-color: transparent;
+.navbar-item {
   color: white;
-  font-size: 1.5rem;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
-.navbar__button:hover {
-  background-color: #61dafb;
-  color: black;
+.navbar-item:hover {
+  color: #61dafb;
 }
 
-.navbar__button:active {
+.nav-button {
   background-color: #61dafb;
-  color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+.nav-button:hover {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
 }
 
 @media (min-width: 768px) {
   .navbar {
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    height: 110px;
   }
-  .navbar__links {
-    order: 2;
-    flex: 1 1 100%;
+
+  .menu-icon {
+    display: none;
   }
+
+  .nav-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* menu-icon should not change position when toggle is clicked */
+.menu-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60%);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+
+
+/* ------------------- CSS for Home ---------------------- */
+.homecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+/* ------------------- CSS for Pricing ---------------------- */
+.pricing__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.pricing h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.pricing h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.pricing h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.pricing h4 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+@media (min-width: 768px) {
+  .pricing__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+/* give pricing cards a border with a border radius and change the colour inside */
+.pricing__card {
+  border: 1px solid #61dafb;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ------------------- CSS for footer ---------------------- */
+
+.footer {
+  bottom: 0;
+  background-color: black;
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  bottom:
+}
+
+
+
+/* ------------------- CSS for Home ---------------------- */
+.homecontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
 }
 
 

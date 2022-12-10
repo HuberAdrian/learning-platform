@@ -15,14 +15,14 @@ function Navbar() {
   // make the navbar transparent when the user scrolls down
   // make the navbar opaque when the user scrolls up
 
-  const [mobile, setMobile] = useState(false) 
+  const [mobile, setMobile] = useState(true) 
   const [toggleNavbar, setToggleNavbar] = useState(false) // toggle the mobile menu
 
   const handleToggle = () => setToggleNavbar(!toggleNavbar)
   const closeMobileMenu = () => setToggleNavbar(false)   // close the mobile menu when a link is clicked
 
   const isMobile = () => { // check if the window is mobile
-    if (window.innerWidth <= 960) {
+    if (window.innerWidth <= 760) {
       setMobile(true)
     } else {
       setMobile(false)
@@ -36,14 +36,9 @@ function Navbar() {
     <>
       <IconContext.Provider value={{ color: '#000' }}> 
         <div className='navbar container'>
-            <HashLink to='/#home' className='navbar-logo' onClick={closeMobileMenu}>
+            <HashLink to='/#home' className='nav-logo' onClick={closeMobileMenu}>
               TRVL <i className='fab fa-typo3' />
             </HashLink>
-            {mobile &&
-            (<div className='menu-icon' onClick={handleToggle}>
-              {toggleNavbar ? <FaTimes /> : <FaBars />}
-            </div>)
-            }
         {((mobile && toggleNavbar ) || !mobile ) && (
           <ul className='nav-menu-mobile'>
             <li className='nav-item'>
@@ -66,13 +61,17 @@ function Navbar() {
                 Preise
               </HashLink>
             </li>
-            <li className='nav-item'>
+            <li className='nav-item nav-button'>
               <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
                 Sign Up
               </Link>
             </li>
           </ul>
         )}
+        <div className='menu-icon' onClick={handleToggle}>
+              {toggleNavbar ? <FaTimes /> : <FaBars />}
+        </div>
+            
         </div>
       </IconContext.Provider>
     </>

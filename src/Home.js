@@ -21,14 +21,12 @@ function Home() {
                     <p>Learn about mechanical engineering with our courses, projects and quizzes</p>
                     <button className="home__button">Sign Up</button>
                 </div>
-                <div className="home__image">
-
-                </div>
-            </div>
+                <div className="home__image"></div>
             <Courses id="courses" />
             <Pricing id="pricing" />
             <About id="about" />
             <Footer/>
+            </div>
         </div>
     )
 } 
