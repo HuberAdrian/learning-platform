@@ -70,12 +70,12 @@ make list items inline if the screen is large enough
   align-items: center;
   padding: 10px;
   z-index: 1;
-  background-color: gray;
+  background-color: white;
 }
 
 .nav-logo {
   font-size: 2rem;
-  color: white;
+  color: black;
   text-decoration: none;
   margin: 0 10px;
 }
@@ -84,13 +84,17 @@ make list items inline if the screen is large enough
   color: #61dafb;
 }
 
-.navbar-item {
-  color: white;
+.nav-item {
+  list-style: none;
+}
+
+.nav-links {
   text-decoration: none;
+  color: black;
   margin: 0 10px;
 }
 
-.navbar-item:hover {
+.nav-links:hover {
   color: #61dafb;
 }
 
@@ -139,6 +143,11 @@ make list items inline if the screen is large enough
   transform: translate(-100%, 60%);
   font-size: 1.8rem;
   cursor: pointer;
+}
+
+/* add a thin border to the bottom of the navbar */
+.navbar {
+  border-bottom: 1px solid #000;
 }
 
 
