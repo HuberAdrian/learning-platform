@@ -9,26 +9,89 @@ import { HashLink } from 'react-router-hash-link';
 
 
 function Navbar() {
+  // create a navbar component with a logo and a list of links and a button
+  // make a hamburger menu for mobile devices
+  // make the navbar sticky
+  // make the navbar transparent when the user scrolls down
+  // make the navbar opaque when the user scrolls up
+
   const [click, setClick] = useState(false)
-  const [button, setButton] = useState(true)
+  const [butto, setButton] = useState(true)
 
   const handleClick = () => setClick(!click)
   const closeMobileMenu = () => setClick(false)
 
   const showButton = () => {
     if (window.innerWidth <= 960) {
-     setButton(false)
-    } 
-    else {
-       setButton(true)
+      setButton(false)
+    } else {
+      setButton(true)
     }
   }
 
   window.addEventListener('resize', showButton)
 
+  return (
+    <>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <div className='navbar'>
+          <div className='navbar-container container'>
+            <HashLink to='/#home' className='navbar-logo' onClick={closeMobileMenu}>
+              TRVL <i className='fab fa-typo3' />
+            </HashLink>
+            <div className='menu-icon' onClick={handleClick}>
+              {click ? <FaTimes /> : <FaBars />}
+            </div>
+            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+              <li className='nav-item'>
+                <HashLink smooth to='/#home' className='nav-links' onClick={closeMobileMenu}>
+                  Home
+                </HashLink>
+              </li>
+              <li className='nav-item'>
+                <HashLink
+                  smooth to='/#courses'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Kurse
+                </HashLink>
+              </li>
+              <li className='nav-item'>
+                <HashLink
+                  smooth to='/#about'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Über uns
+                </HashLink>
+              </li>
+              <li className='nav-item'>
+                <HashLink
+                  smooth to='/#pricing'
+                  className='nav-links'
+                  onClick={closeMobileMenu}
+                >
+                  Preise
+                </HashLink>
+              </li>
+              <li className='nav-item'>
+                <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
+                  Sign Up
+                </Link>
+              </li>
+            </ul>
+            {butto && <button buttonStyle='btn--outline'>SIGN UP</button>}
+          </div>
+        </div>
+      </IconContext.Provider>
+    </>
+  )
+}
+
   // create anchor links to the courses, pricing and about pages
 
-
+  /*
   return (
    <>
       <IconContext.Provider value={{ color: '#fff' }}>
@@ -89,8 +152,7 @@ function Navbar() {
         </div>
       </IconContext.Provider>
     </>
-   )
- }
+   ) */
 
  export default Navbar
  
