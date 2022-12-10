@@ -15,74 +15,64 @@ function Navbar() {
   // make the navbar transparent when the user scrolls down
   // make the navbar opaque when the user scrolls up
 
-  const [click, setClick] = useState(false)
-  const [butto, setButton] = useState(true)
+  const [mobile, setMobile] = useState(false) 
+  const [toggleNavbar, setToggleNavbar] = useState(false) // toggle the mobile menu
 
-  const handleClick = () => setClick(!click)
-  const closeMobileMenu = () => setClick(false)
+  const handleToggle = () => setToggleNavbar(!toggleNavbar)
+  const closeMobileMenu = () => setToggleNavbar(false)   // close the mobile menu when a link is clicked
 
-  const showButton = () => {
+  const isMobile = () => { // check if the window is mobile
     if (window.innerWidth <= 960) {
-      setButton(false)
+      setMobile(true)
     } else {
-      setButton(true)
+      setMobile(false)
     }
   }
 
-  window.addEventListener('resize', showButton)
+  window.addEventListener('resize', isMobile) 
+  // black color code 
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
-        <div className='navbar'>
-          <div className='navbar-container container'>
+      <IconContext.Provider value={{ color: '#000' }}> 
+        <div className='navbar container'>
             <HashLink to='/#home' className='navbar-logo' onClick={closeMobileMenu}>
               TRVL <i className='fab fa-typo3' />
             </HashLink>
-            <div className='menu-icon' onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
-            </div>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-              <li className='nav-item'>
-                <HashLink smooth to='/#home' className='nav-links' onClick={closeMobileMenu}>
-                  Home
-                </HashLink>
-              </li>
-              <li className='nav-item'>
-                <HashLink
-                  smooth to='/#courses'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Kurse
-                </HashLink>
-              </li>
-              <li className='nav-item'>
-                <HashLink
-                  smooth to='/#about'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Über uns
-                </HashLink>
-              </li>
-              <li className='nav-item'>
-                <HashLink
-                  smooth to='/#pricing'
-                  className='nav-links'
-                  onClick={closeMobileMenu}
-                >
-                  Preise
-                </HashLink>
-              </li>
-              <li className='nav-item'>
-                <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                  Sign Up
-                </Link>
-              </li>
-            </ul>
-            {butto && <button buttonStyle='btn--outline'>SIGN UP</button>}
-          </div>
+            {mobile &&
+            (<div className='menu-icon' onClick={handleToggle}>
+              {toggleNavbar ? <FaTimes /> : <FaBars />}
+            </div>)
+            }
+        {((mobile && toggleNavbar ) || !mobile ) && (
+          <ul className='nav-menu-mobile'>
+            <li className='nav-item'>
+              <HashLink smooth to='/#home' className='nav-links' onClick={closeMobileMenu}>
+                Home
+              </HashLink>
+            </li>
+            <li className='nav-item'>
+              <HashLink smooth to='/#courses' className='nav-links' onClick={closeMobileMenu}>
+                Kurse
+              </HashLink>
+            </li>
+            <li className='nav-item'>
+              <HashLink smooth to='/#about' className='nav-links' onClick={closeMobileMenu} >
+                Über uns
+              </HashLink>
+            </li>
+            <li className='nav-item'>
+              <HashLink smooth to='/#pricing'  className='nav-links' onClick={closeMobileMenu} >
+                Preise
+              </HashLink>
+            </li>
+            <li className='nav-item'>
+              <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
+                Sign Up
+              </Link>
+            </li>
+          </ul>
+        )}
         </div>
       </IconContext.Provider>
     </>

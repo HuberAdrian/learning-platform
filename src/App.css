@@ -51,99 +51,88 @@
 }
 
 /* ------------------- CSS for Navbar ---------------------- */
+/*
+ create a navbar component with a logo and a list of links and a button
+make a hamburger menu for mobile devices
+make the navbar sticky
+make the navbar transparent when the user scrolls down
+make the navbar opaque when the user scrolls up
+write css for this navbar
+*/
 
 .navbar {
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  color: white;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: white;
-  color: black;
-  padding: 0 10px;
-  height: 60px;
+  z-index: 1;
 }
 
-.navbar a {
+.navbar__logo {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.navbar__links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.navbar__links a {
+  margin: 0 10px;
+  color: white;
   text-decoration: none;
   font-size: 1.5rem;
-  margin: 5px 10px;
+}
+
+.navbar__links a:hover {
+  color: #61dafb;
+}
+
+.navbar__button {
+  margin: 10px 0;
+  padding: 10px 20px;
+  border: 1px solid #61dafb;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar__button:hover {
+  background-color: #61dafb;
   color: black;
 }
-.navbar a:hover {
-  color: #61dafb;
-}
 
-.navbar div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar button {
+.navbar__button:active {
   background-color: #61dafb;
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  margin: 5px 10px;
-  cursor: pointer;
-  border-radius: 6px;
+  color: black;
 }
-
-/* make button round */
-
-
-.navbar button:hover {
-  color: #61dafb;
-}
-
-/* increase thighness of font */
-
-.navbar button {
-  font-weight: bold;
-}
-
-.navbar img {
-  animation: spin 3s linear infinite;
-  height: 40px;
-  width: 40px;
-}
-
-/* make the logo rotate */
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* make the navbar stop growing when the screen is too big */
 
 @media (min-width: 768px) {
   .navbar {
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     height: 110px;
-    margin: 0 30px;
   }
-
-}
-
-/* add hamburger menu */
-
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    height: 100%;
-  }
-  .navbar div {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .navbar button {
-    margin: 5px 0;
+  .navbar__links {
+    order: 2;
+    flex: 1 1 100%;
   }
 }
+
+
+
 
 /* ------------------- CSS for Pricing ---------------------- */
 
