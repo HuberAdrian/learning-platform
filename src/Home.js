@@ -27,8 +27,8 @@ function Home() {
             <Courses id="courses" />
             <Pricing id="pricing" />
             <About id="about" />
-            <Footer/>
             </div>
+            <Footer/>
         </div>
     )
 } 
