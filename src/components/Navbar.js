@@ -30,7 +30,6 @@ function Navbar() {
   }
 
   window.addEventListener('resize', isMobile) 
-  // black color code 
 
   return (
     <>
