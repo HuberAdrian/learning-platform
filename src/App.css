@@ -58,7 +58,7 @@
   top: 0;
   background-color: transparent;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -81,12 +81,15 @@
 
 .nav-item {
   list-style: none;
+  text-align: center;
+  margin: 10px 10px;
 }
 
 .nav-links {
   text-decoration: none;
   color: black;
   margin: 0 10px;
+  text-align: center;
 }
 
 .nav-links:hover {
@@ -118,6 +121,13 @@
     align-items: center;
   }
 
+  .nav-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 10px 10px;
+ }
+
   .menu-icon {
     display: none;
   }
@@ -127,12 +137,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .nav-menu-mobile {
-     list-style-type: none;
-     display: flex;
-     flex-direction: row;
   }
 }
 
@@ -148,6 +152,8 @@
 }
 
 /* display list items of ul in a row when screen is bigger than 768px */
+
+
 
 
 /* ------------------- CSS for Home ---------------------- */

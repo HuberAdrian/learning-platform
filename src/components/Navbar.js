@@ -48,7 +48,7 @@ function Navbar() {
               TRVL <i className='fab fa-typo3' />
             </HashLink>
         {((mobile && toggleNavbar ) || !mobile ) && (
-          <ul className='nav-menu-mobile'>
+          <ul className='nav-menu'>
             <li className='nav-item'>
               <HashLink smooth to='/#home' className='nav-links' onClick={closeMobileMenu}>
                 Home
