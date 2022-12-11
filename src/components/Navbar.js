@@ -7,6 +7,15 @@ import './../App.css'
 import { HashLink } from 'react-router-hash-link';
 
 
+/* Potential Icons for the Navbar
+
+import Key from './../images/Key.png'
+import Haus from './../images/Haus.png'
+import Page from './../images/Page.png'
+import Book from './../images/Book.png'
+*/
+
+
 
 function Navbar() {
 

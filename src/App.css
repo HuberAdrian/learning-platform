@@ -49,6 +49,8 @@
   }
 }
 
+
+
 /* ------------------- CSS for Navbar ---------------------- */
 
 .nav-container {
@@ -133,6 +135,7 @@
      flex-direction: row;
   }
 }
+
 
 /* menu-icon should not change position when toggle is clicked */
 .menu-icon {
