@@ -50,17 +50,8 @@
 }
 
 /* ------------------- CSS for Navbar ---------------------- */
-/*
- create a navbar component with a logo and a list of links and a button
-make a hamburger menu for mobile devices
-make the navbar sticky
-make the navbar transparent when the user scrolls down
-make the navbar opaque when the user scrolls up
-write css for this navbar
-make list items inline if the screen is large enough
-*/
 
-.navbar {
+.nav-container {
   position: sticky;
   top: 0;
   background-color: transparent;
@@ -71,6 +62,8 @@ make list items inline if the screen is large enough
   padding: 10px;
   z-index: 1;
   background-color: white;
+  border-bottom: 0;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
 }
 
 .nav-logo {
@@ -117,7 +110,7 @@ make list items inline if the screen is large enough
 }
 
 @media (min-width: 768px) {
-  .navbar {
+  .nav-container {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -133,6 +126,12 @@ make list items inline if the screen is large enough
     justify-content: space-between;
     align-items: center;
   }
+
+  .nav-menu-mobile {
+     list-style-type: none;
+     display: flex;
+     flex-direction: row;
+  }
 }
 
 /* menu-icon should not change position when toggle is clicked */
@@ -145,10 +144,7 @@ make list items inline if the screen is large enough
   cursor: pointer;
 }
 
-/* add a thin border to the bottom of the navbar */
-.navbar {
-  border-bottom: 1px solid #000;
-}
+/* display list items of ul in a row when screen is bigger than 768px */
 
 
 /* ------------------- CSS for Home ---------------------- */

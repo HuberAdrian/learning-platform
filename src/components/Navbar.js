@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
@@ -9,11 +9,6 @@ import { HashLink } from 'react-router-hash-link';
 
 
 function Navbar() {
-  // create a navbar component with a logo and a list of links and a button
-  // make a hamburger menu for mobile devices
-  // make the navbar sticky
-  // make the navbar transparent when the user scrolls down
-  // make the navbar opaque when the user scrolls up
 
   const [mobile, setMobile] = useState(true) 
   const [toggleNavbar, setToggleNavbar] = useState(false) // toggle the mobile menu
@@ -29,12 +24,17 @@ function Navbar() {
     }
   }
 
+  // check if the window is mobile when the component is mounted
+  useEffect(() => {
+    isMobile()
+  }, [])
+
   window.addEventListener('resize', isMobile) 
 
   return (
     <>
       <IconContext.Provider value={{ color: '#000' }}> 
-        <div className='navbar container'>
+        <div className='nav-container'>
             <HashLink to='/#home' className='nav-logo' onClick={closeMobileMenu}>
               TRVL <i className='fab fa-typo3' />
             </HashLink>
