@@ -226,7 +226,36 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  bottom:
+  bottom: 0;
+}
+
+.footer a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 5px 10px;
+}
+
+.footer a:hover {
+  color: #61dafb;
+}
+
+.footer div:nth-child(2) {
+  margin: 0 10px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 110px;
+  }
+  .footer>div { 
+    order: 2;
+    flex: 1 1 100%;
+  }
 }
 
 
