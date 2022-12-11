@@ -5,6 +5,7 @@ import Courses from './Courses'
 import Pricing from './Pricing'
 import About from './About'
 import { HashLink } from 'react-router-hash-link';
+import Content from './Content'
 
 function Home() {
 
@@ -22,6 +23,7 @@ function Home() {
                     <button className="home__button">Sign Up</button>
                 </div>
                 <div className="home__image"></div>
+            <Content id="content" />
             <Courses id="courses" />
             <Pricing id="pricing" />
             <About id="about" />
