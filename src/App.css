@@ -311,8 +311,6 @@
   }
 }
 
-/* give pricing cards a border with a border radius and change the colour inside */
-
 .pricing__card {
   border: 1px solid #61dafb;
   border-radius: 20px;
@@ -325,3 +323,47 @@
   justify-content: space-between;
   align-items: center;
 }
+
+
+/* ------------------- CSS for Courses ---------------------- */
+
+/* make a grid for the courses */
+.courses-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  margin: 0 10px;
+}
+
+/* make the cards for the courses */
+.course {
+  border: 1px solid #61dafb;
+  border-radius: 20px;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* dont show the text in the cards */
+.course p {
+  display: none;
+}
+
+/* show the text in the cards when hovering over the card */
+.course:hover p {
+  display: block;
+}
+
+/* make the cards responsive */
+@media (min-width: 768px) {
+  .courses-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
