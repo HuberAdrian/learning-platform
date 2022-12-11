@@ -43,7 +43,8 @@ function Navbar() {
   return (
     <>
       <IconContext.Provider value={{ color: '#000' }}> 
-        <div className='nav-container'>
+        <div className='navbar'>
+          <div className='nav-container'>
             <HashLink to='/#home' className='nav-logo' onClick={closeMobileMenu}>
               TRVL <i className='fab fa-typo3' />
             </HashLink>
@@ -79,7 +80,7 @@ function Navbar() {
         <div className='menu-icon' onClick={handleToggle}>
               {toggleNavbar ? <FaTimes /> : <FaBars />}
         </div>
-            
+        </div>
         </div>
       </IconContext.Provider>
     </>

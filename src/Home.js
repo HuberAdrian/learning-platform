@@ -15,7 +15,7 @@ function Home() {
     return (
         <div> 
             <Navbar/>
-            <div className="home__container">
+            <div className="home-container">
                 <div className="home__text">
                     <h1>Learn Mechanical Engineering</h1>
                     <p>Learn about mechanical engineering with our courses, projects and quizzes</p>
