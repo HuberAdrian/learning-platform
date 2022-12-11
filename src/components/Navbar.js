@@ -52,17 +52,17 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <HashLink smooth to='/#about' className='nav-links' onClick={closeMobileMenu} >
-                Über uns
+                Inhalte
               </HashLink>
             </li>
             <li className='nav-item'>
-              <HashLink smooth to='/#pricing'  className='nav-links' onClick={closeMobileMenu} >
-                Preise
-              </HashLink>
+              <Link to='/login'  className='nav-links' onClick={closeMobileMenu} >
+                Login
+              </Link>
             </li>
             <li className='nav-item nav-button'>
-              <Link to='/sign-up' className='nav-links-mobile' onClick={closeMobileMenu}>
-                Sign Up
+              <Link to='/sign-up' className='nav-links' onClick={closeMobileMenu}>
+                Testen
               </Link>
             </li>
           </ul>
