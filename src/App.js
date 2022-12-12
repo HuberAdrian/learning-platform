@@ -12,7 +12,7 @@ function App() {
 
       {/* create routes for the different pages */}
       <Routes>
-        <Route path='/' exact component={Home} />
+        <Route exact path='/' element={<Home />} />
         <Route path='/person' element={<Person />} />
       </Routes>
     </div>

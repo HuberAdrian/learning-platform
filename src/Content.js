@@ -23,30 +23,35 @@ function Content() {
         <tr>
             <td >Interaktives Lernen</td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
-            <td ><IoIosCloseCircle className='ioIosCloseCircle' /></td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
         </tr>
         <tr>
-            <td >Quiz</td>
+            <td >Prüfungsvorbereitung</td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+        </tr>
+        <tr>
+            <td >Wissensüberprüfung</td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+        </tr>
+        <tr>
+            <td >Statistiken der einzelnen Azubis</td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
             <td ><IoIosCloseCircle className='ioIosCloseCircle' /></td>
         </tr>
         <tr>
-            <td >Quiz</td>
+            <td >Prüfungssimulation</td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
             <td ><IoIosCloseCircle className='ioIosCloseCircle' /></td>
         </tr>
         <tr>
-            <td >Quiz</td>
+            <td >Arbeiten mit Tabellenbuch</td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
             <td ><IoIosCloseCircle className='ioIosCloseCircle' /></td>
         </tr>
         <tr>
-            <td >Quiz</td>
-            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
-            <td ><IoIosCloseCircle className='ioIosCloseCircle' /></td>
-        </tr>
-        <tr>
-            <td >Quiz</td>
+            <td >Mehrspieler</td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
             <td ><IoIosCloseCircle className='ioIosCloseCircle' /></td>
         </tr>
