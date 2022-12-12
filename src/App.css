@@ -401,9 +401,15 @@ table {
   width: 100%;
 }
 
+th:first-child, td:first-child {
+  text-align: left;
+  padding: 8px;
+}
+
+
 th,
 td {
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
 
@@ -411,7 +417,6 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-/* make the IoIosCheckmarkCircle icon green and the IoIosCloseCircle icon red and make them bigger */
 
 .ioIosCheckmarkCircle {
   color: green;

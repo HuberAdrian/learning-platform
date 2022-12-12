@@ -17,8 +17,8 @@ function Content() {
     <table className='table-content' >
         <tr>
             <th className='table-header' ></th>
-            <th className='table-header' >Platform 1</th>
-            <th className='table-header' >Platform 2</th>
+            <th className='table-header' >metall-ausbildung</th>
+            <th className='table-header' >andere Plattformen</th>
         </tr>
         <tr>
             <td >Interaktives Lernen</td>
