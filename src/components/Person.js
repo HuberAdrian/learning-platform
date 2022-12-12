@@ -6,8 +6,9 @@ function Person() {
     return (
         <>
             <button className='test-teacher' >Teacher</button>
-            <button>Student</button>
+            <button className='test-student' >Student</button>
         </>
+    )
 }
 
 export default Person
