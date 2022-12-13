@@ -427,3 +427,45 @@ tr:nth-child(even) {
   color: red;
   font-size: 2rem;
 }
+
+
+/* ------------------- CSS for Person ---------------------- */
+
+.test-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+/* the test-close button should be in the top right corner */
+
+.test-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+/* the test-teacher and test-student button should be large and in the mid center the page */
+
+.test-teacher, .test-student {
+  font-size: 2rem;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #61dafb;
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  background-color: ;
+
+}
+
+/* hover effect for the test-teacher and test-student button */
+
+.test-teacher:hover, .test-student:hover {
+  color: #61dafb;
+  background-color: white;
+
+}
