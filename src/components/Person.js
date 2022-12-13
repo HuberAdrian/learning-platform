@@ -13,10 +13,11 @@ function Person() {
 
     return (
         <>  
+        <button onClick={onClickClose} className='test-close' >X</button>
         <div className='test-container'>
-            <button onClick={onClickClose} className='test-close' >X</button>
-            <button className='test-teacher' >Teacher</button>
-            <button className='test-student' >Student</button>
+            <h1 className='grid-test test-header' >Testen als...</h1>
+            <button className='grid-test test-teacher' >Teacher</button>
+            <button className='grid-test test-student' >Student</button>
         </div>
         </>
     )
