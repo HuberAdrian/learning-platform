@@ -16,8 +16,8 @@ function Person() {
         <button onClick={onClickClose} className='test-close' >X</button>
         <div className='test-container'>
             <h1 className='grid-test test-header' >Testen als...</h1>
-            <button className='grid-test test-teacher' >Teacher</button>
-            <button className='grid-test test-student' >Student</button>
+            <button className='grid-test test-teacher' >Azubi</button>
+            <button className='grid-test test-student' >Ausbilder</button>
         </div>
         </>
     )
