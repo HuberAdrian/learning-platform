@@ -9,14 +9,14 @@ import { IoIosCloseCircle } from 'react-icons/io';
 
 function Content() {
 
-    /*make a divider and a conclusion with the price below the table */
+    // make a info sign with a hover effect that shows a description of the content
 
   return (
     <>
     <div className="content-container">
     <h1>Content</h1>
     <p>Here you can find a comparison of the content and functionality of this platform to another platform</p>
-    <h2>Inhalte</h2>
+    <h3>Inhalte</h3>
     <table className='table-content' >
         <tr>
             <th className='table-header' ></th>
@@ -64,7 +64,7 @@ function Content() {
             <td >0€</td>
         </tr>
     </table>
-    <h2>Funktionalität</h2>
+    <h3>Funktionalität</h3>
     <table className='table-content' >
         <tr>
             <th className='table-header' ></th>

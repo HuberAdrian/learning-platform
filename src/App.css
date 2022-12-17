@@ -157,11 +157,6 @@
   cursor: pointer;
 }
 
-/* display list items of ul in a row when screen is bigger than 768px */
-
-
-
-
 /* ------------------- CSS for Home ---------------------- */
 .home-container {
   display: flex;
@@ -209,7 +204,6 @@
   }
 }
 
-/* give pricing cards a border with a border radius and change the colour inside */
 .pricing__card {
   border: 1px solid #61dafb;
   border-radius: 20px;
@@ -381,12 +375,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 10px;
+  margin: 80px 10px;
 }
 
 .content-container h1 {
   font-size: 2rem;
   margin: 10px 0;
+}
+
+
+.content-container h3 {
+  font-size: 1.5rem;
+  margin: 30px 0 0 0;
+  text-align: left;
+  align-self: flex-start;
 }
 
 /* design the comparison table */
