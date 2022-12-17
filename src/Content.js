@@ -9,11 +9,14 @@ import { IoIosCloseCircle } from 'react-icons/io';
 
 function Content() {
 
+    /*make a divider and a conclusion with the price below the table */
+
   return (
     <>
     <div className="content-container">
     <h1>Content</h1>
     <p>Here you can find a comparison of the content and functionality of this platform to another platform</p>
+    <h2>Inhalte</h2>
     <table className='table-content' >
         <tr>
             <th className='table-header' ></th>
@@ -55,7 +58,39 @@ function Content() {
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
             <td ><IoIosCloseCircle className='ioIosCloseCircle' /></td>
         </tr>
-
+        <tr>
+            <td >Kosten</td>
+            <td >Selbstkosten (~5€ / Azubi) </td>
+            <td >0€</td>
+        </tr>
+    </table>
+    <h2>Funktionalität</h2>
+    <table className='table-content' >
+        <tr>
+            <th className='table-header' ></th>
+            <th className='table-header' >metall-ausbildung</th>
+            <th className='table-header' >andere Plattformen</th>
+        </tr>
+        <tr>
+            <td >Responsive Design</td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+        </tr>
+        <tr>
+            <td >Offlinefähig</td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+        </tr>
+        <tr>
+            <td >Offlinefähig</td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+        </tr>
+        <tr>
+            <td >Offlinefähig</td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+        </tr>
     </table>
     </div>
     </>
