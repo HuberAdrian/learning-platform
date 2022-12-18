@@ -407,6 +407,7 @@ th,
 td {
   text-align: center;
   padding: 8px;
+  font-size: 1.2rem;
 }
 
 tr:nth-child(even) {
@@ -423,6 +424,19 @@ tr:nth-child(even) {
   color: red;
   font-size: 2rem;
 }
+
+.info-text {
+  display: none;
+}
+
+.info-1{
+  font-size: 1rem;
+}
+
+.info-1:hover~.info-text {
+  display: block;
+}
+
 
 
 /* ------------------- CSS for Person ---------------------- */
@@ -455,15 +469,10 @@ tr:nth-child(even) {
   margin: 10px;
   border-radius: 5px;
   font-size: 1.5rem;
-}
-
-
-
-
-.test-close {
   background-color: rgba(0, 0, 0, 0.15);
   color: black;
 }
+
 
 .test-close:hover {
   background-color: rgba(0, 0, 0, 0.25);

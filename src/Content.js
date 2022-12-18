@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.css';
-import { IoIosCheckmarkCircle } from 'react-icons/io';
-import { IoIosCloseCircle } from 'react-icons/io';
+import { IoIosCloseCircle, IoIosCheckmarkCircle, IoIosInformationCircleOutline,  } from 'react-icons/io';
 
 
 
@@ -24,7 +23,7 @@ function Content() {
             <th className='table-header' >andere Plattformen</th>
         </tr>
         <tr>
-            <td >Interaktives Lernen</td>
+            <td >Interaktives Lernen <IoIosInformationCircleOutline className='info-1' /><p className='info-text' >This is a info sample</p> </td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
         </tr>
