@@ -24,10 +24,10 @@ function Home() {
                     <button className="home-button-login">Login</button>
                 </div>
                 <div className="home-image"></div>
-            <Content id="content" />
-            <Courses id="courses" />
-            {/* <Pricing id="pricing" />
-            <About id="about" /> */}
+                <Courses id="courses" />
+                <Content id="content" />
+                {/* <Pricing id="pricing" />
+                <About id="about" /> */}
             </div>
             <Footer/>
         </div>
