@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
         return (
-            <div className='footer' >
+            <footer className='footer' >
                 <a hreft='home'>Startseite</a>
                 <a href='about'>Kurse</a>
                 <a href='Preise'>Preise</a>
@@ -10,7 +10,7 @@ function Footer() {
                 <a href='login' >login</a>
                 <a href='signup' >Registrieren</a>
                 <a href='signup' >Datenschutz</a>
-            </div>
+            </footer>
         )
         }
 

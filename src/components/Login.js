@@ -1,13 +1,17 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Login() {
-    // make a login page with a form to login with email and password
-    // make a button to signup
-    // make a button to reset password
-    // make a button to go back to the home page
+    const navigate = useNavigate();
+
+    // go back to the home page
+    const onClickClose = () => {
+        navigate('/');
+    }
 
     return (
         <div>
+            <button onClick={onClickClose} className='test-close' >X</button>
             <div className="login-container">
                 <div className="login-text">
                     <h1>Login</h1>
