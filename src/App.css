@@ -55,6 +55,9 @@
 
 .navbar {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.75);
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .nav-container {
@@ -71,16 +74,16 @@
   border-bottom: 0;
 }
 
-.nav-logo {
-  font-size: 2rem;
-  color: black;
-  text-decoration: none;
+.nav-logo img {
+  width: 40px;
+  height: 40px;
   margin: 0 10px;
+  animation: spin 3s linear infinite;
+}
+.nav-logo img:hover {
+  cursor: pointer;
 }
 
-.nav-logo:hover {
-  color: #61dafb;
-}
 
 .nav-item {
   list-style: none;
@@ -164,6 +167,16 @@
   cursor: pointer;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 /* ------------------- CSS for Pricing ---------------------- */
 .pricing__container {
   display: flex;
@@ -213,7 +226,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 
 
 

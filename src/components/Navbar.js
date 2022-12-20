@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 import './../App.css'
 import { HashLink } from 'react-router-hash-link';
+import gear from './../images/gear.png'
 
 
 /* Potential Icons for the Navbar
@@ -45,8 +46,10 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#000' }}> 
         <div className='navbar'>
           <div className='nav-container'>
-            <HashLink to='/#home' className='nav-logo' onClick={closeMobileMenu}>
-              TRVL <i className='fab fa-typo3' />
+            <HashLink to='/#home' onClick={closeMobileMenu}>
+              <div className='nav-logo'>
+              <img src={gear} alt='logo' />
+              </div>
             </HashLink>
         {((mobile && toggleNavbar ) || !mobile ) && (
           <ul className='nav-menu'>
