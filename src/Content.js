@@ -13,7 +13,7 @@ function Content() {
   return (
     <>
     <div className="content-container">
-    <h1>Content</h1>
+    <h1>Inhalt & Vergleich</h1>
     <p>Here you can find a comparison of the content and functionality of this platform to another platform</p>
     <h3>Inhalte</h3>
     <table className='table-content' >

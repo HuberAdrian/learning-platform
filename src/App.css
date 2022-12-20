@@ -101,7 +101,6 @@
 
 .nav-button {
   background-color: #61dafb;
-  color: white;
   border: none;
   border-radius: 10px;
   padding: 10px;
@@ -147,7 +146,6 @@
 }
 
 
-/* menu-icon should not change position when toggle is clicked */
 .menu-icon {
   position: absolute;
   top: 0;
@@ -155,16 +153,6 @@
   transform: translate(-100%, 60%);
   font-size: 1.8rem;
   cursor: pointer;
-}
-
-/* ------------------- CSS for Home ---------------------- */
-.home-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 10px;
-  padding: 0px 10%;
 }
 
 /* ------------------- CSS for Pricing ---------------------- */
@@ -217,57 +205,45 @@
   align-items: center;
 }
 
-/* ------------------- CSS for footer ---------------------- */
-
-.footer {
-  bottom: 0;
-  background-color: black;
-  color: white;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  bottom: 0;
-}
-
-.footer a {
-  color: white;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 1.5rem;
-  margin: 5px 10px;
-}
-
-.footer a:hover {
-  color: #61dafb;
-}
-
-.footer div:nth-child(2) {
-  margin: 0 10px;
-}
-
-@media (min-width: 768px) {
-  .footer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 110px;
-  }
-  .footer>div { 
-    order: 2;
-    flex: 1 1 100%;
-  }
-}
 
 
 
 /* ------------------- CSS for Home ---------------------- */
-.homecontainer {
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 10px;
+}
+
+.home-text {
+  margin: 0 0 500px; /* This is to push the text down while testing */
+}
+
+.home-text h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.home-text button {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.home-text button:hover {
+  background-color: #61dafb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 
