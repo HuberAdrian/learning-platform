@@ -32,3 +32,25 @@
   align-items: center;
   margin: 20px 10px;  
 }
+
+.container-azubi-courses {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  overflow-x: scroll;
+  margin: 10px 0px;  
+}
+
+.azubi-courses{
+  border: 3px solid black;
+  margin-left: 20px;
+  border-radius: 15px;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  /* center content in the div */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

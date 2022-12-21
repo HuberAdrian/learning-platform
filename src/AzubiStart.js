@@ -40,6 +40,10 @@ function Azubi() {
       </div>
       <h2>Empfohlene Kurse</h2>
       <div className='container-azubi-courses' >
+        <div className='azubi-courses' >
+          <h3>Kurs 1</h3>
+          <p>bla bla bla</p>
+        </div>
       </div>
       <h2>Gruppenspiele</h2>
       <div className='container-azubi-games' >
