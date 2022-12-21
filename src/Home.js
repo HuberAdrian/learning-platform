@@ -4,30 +4,15 @@ import Navbar from './components/Navbar'
 import Courses from './Courses'
 // import Pricing from './Pricing'
 // import About from './About'
-import { HashLink } from 'react-router-hash-link';
 import Content from './Content'
-import { useRef } from 'react';
+import { Element } from 'react-scroll'
 
 function Home() {
 
-    const contentRef = useRef(null);
-
-    const handleClick = (event) => {
-        // Prevent the default link behavior
-        event.preventDefault();
-    
-        // Scroll the page to the target element
-        contentRef.current.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      };
-
-
     return (
         <div> 
-            <Navbar/>
-            <div className="home-container">
+            <Navbar />
+            <div id='start' className="home-container">
                 <div className="home-text">
                     <h1>Learn Mechanical Engineering</h1>
                     <p>Learn about mechanical engineering with our courses, projects and quizzes</p>
@@ -35,8 +20,12 @@ function Home() {
                     <button className="home-button-login">Login</button>
                 </div>
                 <div className="home-image"></div>
-                <Courses id="courses" />
-                <Content id="content" ref={contentRef} />
+                <Element name="courses">
+                    <Courses />
+                </Element>
+                <Element name="content">
+                    <Content />
+                </Element>
                 {/* <Pricing id="pricing" />
                 <About id="about" /> */}
             </div>

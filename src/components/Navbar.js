@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Link as LinkScroll } from 'react-scroll'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
 import './../App.css'
-import { HashLink } from 'react-router-hash-link';
 import gear from './../images/gear.png'
 
 
@@ -46,27 +46,27 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#000' }}> 
         <div className='navbar'>
           <div className='nav-container'>
-            <HashLink to='/#home' onClick={closeMobileMenu}>
+            <LinkScroll offset={-90} smooth to='start' onClick={closeMobileMenu}>
               <div className='nav-logo'>
               <img src={gear} alt='logo' />
               </div>
-            </HashLink>
+            </LinkScroll>
         {((mobile && toggleNavbar ) || !mobile ) && (
           <ul className='nav-menu'>
             <li className='nav-item'>
-              <HashLink smooth to='/#home' className='nav-links' onClick={closeMobileMenu}>
+              <LinkScroll smooth to='start' offset={-90} className='nav-links' onClick={closeMobileMenu}>
                 Home
-              </HashLink>
+              </LinkScroll>
             </li>
             <li className='nav-item'>
-              <HashLink smooth to='/#courses' className='nav-links' onClick={closeMobileMenu}>
+              <LinkScroll smooth to='courses' offset={-70} className='nav-links' onClick={closeMobileMenu}>
                 Kurse
-              </HashLink>
+              </LinkScroll>
             </li>
             <li className='nav-item'>
-              <Link to='/#content' className='nav-links' onClick={closeMobileMenu} >
+              <LinkScroll smooth to='content' className='nav-links' onClick={closeMobileMenu} >
                 Inhalte
-              </Link>
+              </LinkScroll>
             </li>
             <li className='nav-item'>
               <Link to='/login'  className='nav-links' onClick={closeMobileMenu} >
