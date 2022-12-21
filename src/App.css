@@ -459,24 +459,6 @@ tr:nth-child(even) {
 }
 
 
-.test-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10px;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.15);
-  color: black;
-}
-
-
-.test-close:hover {
-  background-color: rgba(0, 0, 0, 0.25);
-  color: white;
-  cursor: pointer;
-}
-
 
 .test-teacher, .test-student {
   font-size: 2rem;

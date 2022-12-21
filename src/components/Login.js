@@ -1,17 +1,14 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import ButtonGoBack from './ButtonGoBack';
 
 function Login() {
     const navigate = useNavigate();
 
-    // go back to the home page
-    const onClickClose = () => {
-        navigate('/');
-    }
 
     return (
         <div>
-            <button onClick={onClickClose} className='test-close' >X</button>
+            <ButtonGoBack />
             <div className="login-container">
                 <div className="login-text">
                     <h1>Login</h1>

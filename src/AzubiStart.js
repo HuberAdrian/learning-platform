@@ -1,4 +1,5 @@
 import React from 'react'
+import ButtonGoBack from './components/ButtonGoBack'
 
 function Azubi() {
 
@@ -7,6 +8,8 @@ function Azubi() {
   // make also a field where he can join group games with other students to improve his skills and knowledge
 
   return (
+    <>
+    <ButtonGoBack />
     <div className='container-start' >
       <h1>Startseite Azubi</h1>
       <div className='container-timeline' >
@@ -22,6 +25,7 @@ function Azubi() {
         <h2>Gruppenspiele</h2>
       </div>
     </div>
+    </>
   )
 }
 
