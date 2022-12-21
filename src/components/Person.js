@@ -12,11 +12,11 @@ function Person() {
     }
 
     const onClickAzubi = () => {
-        navigate('/');
+        navigate('/Azubi');
     }
 
     const onClickAusbilder = () => {
-        navigate('/');
+        navigate('/Ausbilder');
     }
 
 

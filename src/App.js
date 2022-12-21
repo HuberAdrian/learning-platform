@@ -3,6 +3,9 @@ import Home from './Home';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Person from './components/Person';
 import Login from './components/Login';
+import AzubiStart from './AzubiStart';
+import AusbilderStart from './AusbilderStart';
+
 
 function App() {
 
@@ -14,6 +17,9 @@ function App() {
         <Route exact path='/' element={<Home />} />
         <Route path='/person' element={<Person />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/Azubi' element={<AzubiStart />} />
+        <Route path='/Ausbilder' element={<AusbilderStart />} />
+        <Route path='*' element={<h1>404: Not Found</h1>} />
       </Routes>
     </div>
   );
