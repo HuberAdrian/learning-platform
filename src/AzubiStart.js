@@ -1,6 +1,8 @@
 import React from 'react'
 import ButtonGoBack from './components/ButtonGoBack'
 import ProgressBar from 'react-animated-progress-bar';
+import './AzubiStart.css'
+import NavbarAzubi from './components/NavbarAzubi';
 
 function Azubi() {
 
@@ -11,9 +13,10 @@ function Azubi() {
   return (
     <>
     <ButtonGoBack />
-    <div className='container-start' >
+    <NavbarAzubi />
+    <div className='container-azubi-start' >
       <h1>Startseite Azubi</h1>
-      <div className='container-timeline' >
+      <div className='container-azubi-timeline' >
         <h2>Timeline</h2>
         <p>Start</p>
         <ProgressBar
@@ -30,13 +33,13 @@ function Azubi() {
       />
         <p>Abschlussprüfung Teil II</p>
       </div>
-      <div className='container-tasks' >
+      <div className='container-azubi-tasks' >
         <h2>Anstehende Prüfungen</h2>
       </div>
-      <div className='container-courses' >
+      <div className='container-azubi-courses' >
         <h2>Empfohlene Kurse</h2>
       </div>
-      <div className='container-games' >
+      <div className='container-azubi-games' >
         <h2>Gruppenspiele</h2>
       </div>
     </div>

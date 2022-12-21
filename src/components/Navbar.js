@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { IconContext } from 'react-icons/lib'
@@ -26,6 +26,13 @@ function Navbar() {
   const handleToggle = () => setToggleNavbar(!toggleNavbar)
   const closeMobileMenu = () => setToggleNavbar(false)   // close the mobile menu when a link is clicked
 
+  const navigate = useNavigate();
+
+  const onClickLogo = () => {
+      navigate(0);
+      closeMobileMenu()
+    }
+
   const isMobile = () => { // check if the window is mobile
     if (window.innerWidth <= 760) {
       setMobile(true)
@@ -46,11 +53,11 @@ function Navbar() {
       <IconContext.Provider value={{ color: '#000' }}> 
         <div className='navbar'>
           <div className='nav-container'>
-            <LinkScroll offset={-90} smooth to='start' onClick={closeMobileMenu}>
+            <Link to='/' onClick={onClickLogo}>
               <div className='nav-logo'>
               <img src={gear} alt='logo' />
               </div>
-            </LinkScroll>
+            </Link>
         {((mobile && toggleNavbar ) || !mobile ) && (
           <ul className='nav-menu'>
             <li className='nav-item'>
