@@ -1,5 +1,6 @@
 import React from 'react'
 import ButtonGoBack from './components/ButtonGoBack'
+import ProgressBar from 'react-animated-progress-bar';
 
 function Azubi() {
 
@@ -14,6 +15,20 @@ function Azubi() {
       <h1>Startseite Azubi</h1>
       <div className='container-timeline' >
         <h2>Timeline</h2>
+        <p>Start</p>
+        <ProgressBar
+        width="400px"
+        height="10px"
+        rect
+        fontColor="gray"
+        percentage="70"
+        rectPadding="1px"
+        rectBorderRadius="20px"
+        trackPathColor="transparent"
+        bgColor="#333333"
+        trackBorderColor="grey"
+      />
+        <p>Abschlussprüfung Teil II</p>
       </div>
       <div className='container-tasks' >
         <h2>Anstehende Prüfungen</h2>
