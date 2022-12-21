@@ -6,11 +6,22 @@ import Courses from './Courses'
 // import About from './About'
 import { HashLink } from 'react-router-hash-link';
 import Content from './Content'
+import { useRef } from 'react';
 
 function Home() {
 
-    // make a landing page for a mechanical engineering learning page with a button to login and a button to signup
+    const contentRef = useRef(null);
 
+    const handleClick = (event) => {
+        // Prevent the default link behavior
+        event.preventDefault();
+    
+        // Scroll the page to the target element
+        contentRef.current.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      };
 
 
     return (
@@ -25,7 +36,7 @@ function Home() {
                 </div>
                 <div className="home-image"></div>
                 <Courses id="courses" />
-                <Content id="content" />
+                <Content id="content" ref={contentRef} />
                 {/* <Pricing id="pricing" />
                 <About id="about" /> */}
             </div>
