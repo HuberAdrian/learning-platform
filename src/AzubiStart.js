@@ -16,31 +16,33 @@ function Azubi() {
     <NavbarAzubi />
     <div className='container-azubi-start' >
       <h1>Startseite Azubi</h1>
-      <div className='container-azubi-timeline' >
-        <h2>Timeline</h2>
-        <p>Start</p>
-        <ProgressBar
-        width="400px"
-        height="10px"
-        rect
-        fontColor="gray"
-        percentage="70"
-        rectPadding="1px"
-        rectBorderRadius="20px"
-        trackPathColor="transparent"
-        bgColor="#333333"
-        trackBorderColor="grey"
-      />
-        <p>Abschlussprüfung Teil II</p>
+        <h2 className='azubi-timeline-header' >Timeline</h2>
+        <div className='container-azubi-timeline' >
+          <p className='azubi-timeline-start' >Start </p>
+          <ProgressBar
+          width="400px"
+          height="10px"
+          rect
+          fontColor="gray"
+          percentage="70"
+          rectPadding="1px"
+          rectBorderRadius="20px"
+          trackPathColor="transparent"
+          bgColor="#333333"
+          trackBorderColor="grey"
+          className='azubi-timeline-progressbar'
+          />
+          <p className='azubi-timeline-end' >Abschlussprüfung Teil II</p>
       </div>
+      <h2>Anstehende Prüfungen</h2>
       <div className='container-azubi-tasks' >
-        <h2>Anstehende Prüfungen</h2>
+
       </div>
+      <h2>Empfohlene Kurse</h2>
       <div className='container-azubi-courses' >
-        <h2>Empfohlene Kurse</h2>
       </div>
+      <h2>Gruppenspiele</h2>
       <div className='container-azubi-games' >
-        <h2>Gruppenspiele</h2>
       </div>
     </div>
     </>
