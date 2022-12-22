@@ -6,7 +6,10 @@
   justify-content: center;
   align-items: flex-start;
   margin: 20px 10px;  
+  overflow: scroll;
 }
+
+/* max-width for the container-azubi-start should be the screen width */
 
 /* the h2 should be aligned on the left side */
 
@@ -55,3 +58,25 @@
   justify-content: center;
   align-items: center;
 }
+
+.container-azubi-games {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  overflow-x: scroll;
+  align-items: left;
+  width: 100%;
+}
+
+.azubi-game{
+    border: 3px solid black;
+    margin-left: 20px;
+    border-radius: 15px;
+    padding: 5px;
+    height: 300px;
+    /* center content in the div */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

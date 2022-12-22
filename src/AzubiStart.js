@@ -4,6 +4,7 @@ import ProgressBar from 'react-animated-progress-bar';
 import './AzubiStart.css'
 import NavbarAzubi from './components/NavbarAzubi';
 import CoursePreview from './components/CoursePreview';
+import GamePreview from './components/GamePreview';
 
 function Azubi() {
 
@@ -48,6 +49,8 @@ function Azubi() {
       </div>
       <h2>Gruppenspiele</h2>
       <div className='container-azubi-games' >
+        <GamePreview />
+        <GamePreview />
       </div>
     </div>
     </>
