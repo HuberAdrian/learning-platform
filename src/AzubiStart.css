@@ -21,6 +21,7 @@
   .container-azubi-start {
     max-width: 1200px;
     margin: 20px auto;
+    overflow: scroll;
   }
 }
 
@@ -38,7 +39,7 @@
   flex-direction: row;
   justify-content: left;
   overflow-x: scroll;
-  margin: 10px 0px;  
+  align-items: left;
 }
 
 .azubi-courses{

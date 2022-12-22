@@ -3,6 +3,7 @@ import ButtonGoBack from './components/ButtonGoBack'
 import ProgressBar from 'react-animated-progress-bar';
 import './AzubiStart.css'
 import NavbarAzubi from './components/NavbarAzubi';
+import CoursePreview from './components/CoursePreview';
 
 function Azubi() {
 
@@ -36,14 +37,14 @@ function Azubi() {
       </div>
       <h2>Anstehende Prüfungen</h2>
       <div className='container-azubi-tasks' >
-
       </div>
       <h2>Empfohlene Kurse</h2>
       <div className='container-azubi-courses' >
-        <div className='azubi-courses' >
-          <h3>Kurs 1</h3>
-          <p>bla bla bla</p>
-        </div>
+        <CoursePreview />
+        <CoursePreview />
+        <CoursePreview />
+        <CoursePreview />
+        <CoursePreview />
       </div>
       <h2>Gruppenspiele</h2>
       <div className='container-azubi-games' >
