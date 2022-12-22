@@ -1,4 +1,7 @@
 /* make container-azubi-start' a flexbox container and center the content */
+.App {
+  background-color: #f8f8f8;
+}
 
 .container-azubi-start {
   display: flex;
@@ -7,6 +10,7 @@
   align-items: flex-start;
   margin: 20px 10px;  
   overflow: scroll;
+  background-color: #f8f8f8;
 }
 
 /* max-width for the container-azubi-start should be the screen width */
@@ -46,10 +50,10 @@
 }
 
 .azubi-courses{
-  border: 3px solid black;
+  border: 1px solid black;
+  border-color: rgba(0,0,0,0.2);
   margin-left: 20px;
   border-radius: 15px;
-  padding: 5px;
   width: 300px;
   height: 300px;
   /* center content in the div */
@@ -57,6 +61,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1)
 }
 
 .container-azubi-games {
@@ -69,14 +75,16 @@
 }
 
 .azubi-game{
-    border: 3px solid black;
-    margin-left: 20px;
-    border-radius: 15px;
-    padding: 5px;
-    height: 300px;
-    /* center content in the div */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid black;
+  border-color: rgba(0,0,0,0.2);
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  /* center content in the div */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1)
   }
