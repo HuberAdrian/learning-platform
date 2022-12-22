@@ -99,6 +99,7 @@
 
 .container-azubi-start p {
     margin: 0;
+    margin-left: 20px;
     font-size: 18px;
     line-height: 1.33em;
     color: rgba(0,0,0,0.5);

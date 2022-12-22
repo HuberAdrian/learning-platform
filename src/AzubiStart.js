@@ -5,6 +5,7 @@ import './AzubiStart.css'
 import NavbarAzubi from './components/NavbarAzubi';
 import CoursePreview from './components/CoursePreview';
 import GamePreview from './components/GamePreview';
+import Footer from './components/Footer';
 
 function Azubi() {
 
@@ -54,6 +55,7 @@ function Azubi() {
         <GamePreview />
       </div>
     </div>
+    <Footer />
     </>
   )
 }
