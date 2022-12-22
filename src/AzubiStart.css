@@ -88,3 +88,19 @@
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1)
   }
+
+.container-azubi-start h2 {
+    margin-bottom: 12px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.11em;
+    color: #000;
+}
+
+.container-azubi-start p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.33em;
+    color: rgba(0,0,0,0.5);
+    font-weight: 700;
+}

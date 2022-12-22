@@ -40,6 +40,7 @@ function Azubi() {
       <div className='container-azubi-tasks' >
       </div>
       <h2>Empfohlene Kurse</h2>
+      <p>Für deine nächste Prüfung</p>
       <div className='container-azubi-courses' >
         <CoursePreview />
         <CoursePreview />
