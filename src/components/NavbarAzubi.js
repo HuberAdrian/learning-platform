@@ -20,6 +20,10 @@ function NavbarAzubi() {
         closeMobileMenu()
     }
 
+    const onClickTestEnd = () => {
+        navigate('/');
+    }
+
 
     const [mobile, setMobile] = useState(true) 
     const [toggleNavbar, setToggleNavbar] = useState(false) // toggle the mobile menu
@@ -69,7 +73,7 @@ function NavbarAzubi() {
                 Einstellungen
               </Link>
             </li>
-            <li className='nav-item nav-button'>
+            <li className='nav-item nav-button' onClick={onClickTestEnd} >
               <Link to='/' className='nav-links nav-link-button' onClick={closeMobileMenu}>
                 Testen beenden
               </Link>

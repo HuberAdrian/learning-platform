@@ -33,6 +33,10 @@ function Navbar() {
       closeMobileMenu()
     }
 
+    const onClickTest = () => {
+      navigate('/person');
+  }
+
   const isMobile = () => { // check if the window is mobile
     if (window.innerWidth <= 760) {
       setMobile(true)
@@ -80,7 +84,7 @@ function Navbar() {
                 Login
               </Link>
             </li>
-            <li className='nav-item nav-button'>
+            <li className='nav-item nav-button' onClick={onClickTest} >
               <Link to='/person' className='nav-links nav-link-button' onClick={closeMobileMenu}>
                 Testen
               </Link>
