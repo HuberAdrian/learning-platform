@@ -5,6 +5,7 @@ import Person from './components/Person';
 import Login from './components/Login';
 import AzubiStart from './AzubiStart';
 import AusbilderStart from './AusbilderStart';
+import CourseExample from './components/CourseExample';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/Azubi' element={<AzubiStart />} />
         <Route path='/Ausbilder' element={<AusbilderStart />} />
+        <Route path='/KursBsp1' element={<CourseExample />} />
         <Route path='*' element={<h1>404: Not Found</h1>} />
       </Routes>
     </div>

@@ -57,7 +57,7 @@ function Azubi() {
       <h2>Sonstige Kurse</h2>
       <p>Eine Auswahl an Kursen</p>
       <div className='container-azubi-courses' >
-        <CoursePreview />
+        <CoursePreview link='/KursBsp1' />
         <CoursePreview />
         <CoursePreview />
         <CoursePreview />
