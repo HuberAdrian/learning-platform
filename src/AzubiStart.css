@@ -1,5 +1,5 @@
 /* make container-azubi-start' a flexbox container and center the content */
-.App {
+.color {
   background-color: #f8f8f8;
 }
 
@@ -28,7 +28,8 @@
   .container-azubi-start {
     max-width: 1200px;
     margin: 20px auto;
-    overflow: scroll;
+    overflow-x: scroll;
+    overflow-y: auto;
   }
 }
 
@@ -45,7 +46,6 @@
   display: flex;
   flex-direction: row;
   justify-content: left;
-  overflow-x: scroll;
   align-items: left;
 }
 
@@ -69,7 +69,6 @@
   display: flex;
   flex-direction: column;
   justify-content: left;
-  overflow-x: scroll;
   align-items: left;
   width: 100%;
 }

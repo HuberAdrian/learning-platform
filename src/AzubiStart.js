@@ -15,6 +15,7 @@ function Azubi() {
 
   return (
     <>
+    <div className='color' >
     <ButtonGoBack />
     <NavbarAzubi />
     <div className='container-azubi-start' >
@@ -47,15 +48,24 @@ function Azubi() {
         <CoursePreview />
         <CoursePreview />
         <CoursePreview />
-        <CoursePreview />
       </div>
       <h2>Gruppenspiele</h2>
       <div className='container-azubi-games' >
         <GamePreview />
         <GamePreview />
       </div>
+      <h2>Sonstige Kurse</h2>
+      <p>Eine Auswahl an Kursen</p>
+      <div className='container-azubi-courses' >
+        <CoursePreview />
+        <CoursePreview />
+        <CoursePreview />
+        <CoursePreview />
+        <CoursePreview />
+        </div>
     </div>
     <Footer />
+    </div>
     </>
   )
 }
