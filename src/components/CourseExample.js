@@ -18,6 +18,8 @@ function handleAnswerSelect(event) {
 setSelectedAnswer(event.target.value);
 }
 
+
+
 return (
 <div className="Course">
 {explanationVisible && (
@@ -34,12 +36,12 @@ return (
     <div key={answer.id}>
      <input
         type="radio"
-        id={answer-${answer.id}}
+        id={answer-answer.id}
         value={answer.id}
         checked={selectedAnswer === answer.id}
         onChange={handleAnswerSelect}
      />
-    <label htmlFor={answer-${answer.id}}>{answer.text}</label>
+    <label htmlFor={answer-answer.id}>{answer.text}</label>
     </div>
     ))}
 </form>
