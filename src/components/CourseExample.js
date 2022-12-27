@@ -13,8 +13,16 @@ function CourseExample() {
 
   // question declaration
   const explanation = "React is a JavaScript library for building user interfaces. It was developed by Facebook and is often used for building single-page applications and mobile applications.";
-  const questions = [    {      id: 1,      text: "What is React used for?",      answers: [        { id: 1, text: "Building user interfaces" },        { id: 2, text: "Creating animations" },        { id: 3, text: "Managing databases" },        { id: 4, text: "All of the above" }      ],
-      correctAnswer: 1
+  const questions = [    {      
+    id: 1,      
+    text: "What is React used for?",      
+    answers: [        
+        { id: 1, text: "Building user interfaces" },        
+        { id: 2, text: "Creating animations" },        
+        { id: 3, text: "Managing databases" },        
+        { id: 4, text: "All of the above" }      
+    ],
+    correctAnswer: 1
     },
     {
       id: 2,
@@ -31,6 +39,7 @@ function CourseExample() {
 
   function handleAnswerSelect(event) {
     setSelectedAnswer(event.target.value);
+    console.log(event.target.value);
   }
 
   function handleExplanationClicked() {
@@ -39,6 +48,8 @@ function CourseExample() {
   }
 
   function handleSolutionClicked() {
+    console.log(selectedAnswer);
+    console.log(questions[currentQuestion - 1].correctAnswer);
     setShowSolution(true);
     // increment score if the selected answer is correct
     if (selectedAnswer == questions[currentQuestion - 1].correctAnswer) {
@@ -55,11 +66,6 @@ function CourseExample() {
     setSelectedAnswer(null);
     setShowSolution(false);
   }
-
-  const currentQuestionObject = questions[currentQuestion - 1];
-  const currentQuestionText = currentQuestionObject.text;
-  const currentAnswers = currentQuestionObject.answers;
-  const currentCorrectAnswer = currentQuestionObject.correctAnswer;
 
   return (
     <div className="Course">
@@ -84,15 +90,15 @@ function CourseExample() {
               <div key={answer.id}>
                 <input
                   type="radio"
-                  id={answer-answer.id}
                   value={answer.id}
-                  checked={selectedAnswer === answer.id}
+                  id={answer-answer.id}
+                  checked={selectedAnswer == answer.id}
                   onChange={handleAnswerSelect}
-                  disabled={showSolution ? true : false}
                 />
                 <label htmlFor={answer-answer.id}>{answer.text}</label>
               </div>
-            ))}
+            )
+            ) }
           </form>
           {selectedAnswer && (
             <div>
@@ -109,7 +115,7 @@ function CourseExample() {
             </div>
           )}
           {currentQuestion < questions.length && (
-            <button onClick={handleNextQuestionClicked}>Next Question</button>
+            <button disabled={showSolution ? false : true} onClick={handleNextQuestionClicked}>Next Question</button>
           )}
           {currentQuestion == questions.length && (
             <div>
