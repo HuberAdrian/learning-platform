@@ -1,0 +1,83 @@
+.Course {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .Course p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .Course form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Course form div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .Course form input[type="radio"] {
+    display: none;
+  }
+  
+  .Course form label {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .Course form input[type="radio"]:checked + label {
+    background-color: lightblue;
+  }
+  
+  .Course form label:hover {
+    background-color: whitesmoke;
+  }
+  
+  .Course .solution {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .Course .solution.correct {
+    color: green;
+  }
+  
+  .Course .solution.incorrect {
+    color: red;
+  }
+  
+  .Course button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .Course button:hover {
+    background-color: lightblue;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .Course {
+      width: 50%;
+    }
+  }
+  
