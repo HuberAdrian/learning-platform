@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './CourseExample.css';
 
+
 function CourseExample() {
 
   // states
@@ -87,15 +88,15 @@ function CourseExample() {
           <p>{questions[currentQuestion - 1].text}</p>
           <form>
             {questions[currentQuestion - 1].answers.map(answer => (
-              <div key={answer.id}>
+              <div key={answer.id} >
                 <input
                   type="radio"
                   value={answer.id}
-                  id={answer-answer.id}
+                  id={answer.id}
                   checked={selectedAnswer == answer.id}
                   onChange={handleAnswerSelect}
                 />
-                <label htmlFor={answer-answer.id}>{answer.text}</label>
+                <label htmlFor={answer.id}>{answer.text}</label>
               </div>
             )
             ) }
