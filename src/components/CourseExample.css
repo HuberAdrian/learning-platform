@@ -9,6 +9,11 @@
     border-radius: 5px;
   }
   
+  .Course h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
   .Course p {
     font-size: 1.2em;
     margin-bottom: 10px;

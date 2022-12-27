@@ -95,6 +95,7 @@ function CourseExample() {
                   id={answer.id}
                   checked={selectedAnswer == answer.id}
                   onChange={handleAnswerSelect}
+                  disabled={showSolution ? true : false}
                 />
                 <label htmlFor={answer.id}>{answer.text}</label>
               </div>
@@ -107,9 +108,9 @@ function CourseExample() {
               {showSolution && (
                 <div>
                   {selectedAnswer == questions[currentQuestion - 1].correctAnswer ? (
-                    <p>Correct!</p>
+                    <p>Richtig!</p>
                   ) : (
-                    <p>Incorrect. The correct answer is: {questions[currentQuestion - 1].answers[questions[currentQuestion - 1].correctAnswer - 1].text}</p>
+                    <p>Falsch! Die richtige Antwort ist: "{questions[currentQuestion - 1].answers[questions[currentQuestion - 1].correctAnswer - 1].text}"</p>
                   )}
                 </div>
               )}
