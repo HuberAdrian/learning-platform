@@ -1,84 +1,5 @@
-/*
 import React, { useState } from 'react';
-
-function CourseExample() {
-  const [explanationVisible, setExplanationVisible] = useState(true);
-  const [questionVisible, setQuestionVisible] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [showSolution, setShowSolution] = useState(false);
-  const [score, setScore] = useState(0);
-
-  const explanation = "React is a JavaScript library for building user interfaces. It was developed by Facebook and is often used for building single-page applications and mobile applications.";
-  const question = "What is React used for?";
-  const answers = [
-    { id: 1, text: "Building user interfaces" },
-    { id: 2, text: "Creating animations" },
-    { id: 3, text: "Managing databases" },
-    { id: 4, text: "All of the above" }
-  ];
-
-  function handleAnswerSelect(event) {
-    setSelectedAnswer(event.target.value);
-  }
-
-  function handleExplanationClicked() {
-    setExplanationVisible(false);
-    setQuestionVisible(true);
-  }
-
-  function handleSolutionClicked() {
-    setShowSolution(true);
-  }
-
-  return (
-    <div className="Course">
-      {explanationVisible && (
-        <div>
-          <p>{explanation}</p>
-          <button onClick={handleExplanationClicked}>Continue</button>
-        </div>
-      )}
-      {questionVisible && (
-        <div>
-          <p>{question}</p>
-          <form>
-            {answers.map(answer => (
-              <div key={answer.id}>
-                <input
-                  type="radio"
-                  id={answer-answer.id}
-                  value={answer.id}
-                  checked={selectedAnswer === answer.id}
-                  onChange={handleAnswerSelect}
-                />
-                <label htmlFor={answer-answer.id}>{answer.text}</label>
-              </div>
-            ))}
-          </form>
-          {selectedAnswer && (
-            <div>
-              <button onClick={handleSolutionClicked}>See Solution</button>
-              {showSolution && (
-                <div>
-                  {selectedAnswer === 1 ? (
-                    <p>Correct! The correct answer is: {answers[0].text}</p>
-                  ) : (
-                    <p>Incorrect. The correct answer is: {answers[0].text}</p>
-                  )}
-                </div>
-              )}
-            </div>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-export default CourseExample;
-*/
-
-import React, { useState } from 'react';
+import './CourseExample.css';
 
 function CourseExample() {
 
@@ -119,6 +40,10 @@ function CourseExample() {
 
   function handleSolutionClicked() {
     setShowSolution(true);
+    // increment score if the selected answer is correct
+    if (selectedAnswer == questions[currentQuestion - 1].correctAnswer) {
+        setScore(score + 1);
+        }
   }
 
   function handleNextQuestionClicked() {
@@ -138,10 +63,17 @@ function CourseExample() {
 
   return (
     <div className="Course">
+        <div className="Course-header">
+        {questionVisible ? (
+        <h3>Question</h3>
+      ) : (
+        <h3>Explanation</h3>
+      )}
+        </div>
       {explanationVisible && (
         <div>
           <p>{explanation}</p>
-          <button onClick={handleExplanationClicked}>Continue</button>
+          <button className='btn-action' onClick={handleExplanationClicked}>Continue</button>
         </div>
       )}
       {questionVisible && (
@@ -156,7 +88,7 @@ function CourseExample() {
                   value={answer.id}
                   checked={selectedAnswer === answer.id}
                   onChange={handleAnswerSelect}
-                  input disabled={showSolution}
+                  disabled={showSolution ? true : false}
                 />
                 <label htmlFor={answer-answer.id}>{answer.text}</label>
               </div>
