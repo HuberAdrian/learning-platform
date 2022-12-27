@@ -81,6 +81,8 @@ export default CourseExample;
 import React, { useState } from 'react';
 
 function CourseExample() {
+
+  // states
   const [explanationVisible, setExplanationVisible] = useState(true);
   const [questionVisible, setQuestionVisible] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -88,6 +90,7 @@ function CourseExample() {
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(1);
 
+  // question declaration
   const explanation = "React is a JavaScript library for building user interfaces. It was developed by Facebook and is often used for building single-page applications and mobile applications.";
   const questions = [    {      id: 1,      text: "What is React used for?",      answers: [        { id: 1, text: "Building user interfaces" },        { id: 2, text: "Creating animations" },        { id: 3, text: "Managing databases" },        { id: 4, text: "All of the above" }      ],
       correctAnswer: 1
@@ -153,6 +156,7 @@ function CourseExample() {
                   value={answer.id}
                   checked={selectedAnswer === answer.id}
                   onChange={handleAnswerSelect}
+                  input disabled={showSolution}
                 />
                 <label htmlFor={answer-answer.id}>{answer.text}</label>
               </div>
