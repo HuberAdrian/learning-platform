@@ -35,6 +35,17 @@ function CourseExample() {
         { id: 4, text: "An application that loads the necessary assets for each view or action as the user navigates to them" }
       ],
       correctAnswer: 3
+    },
+    {
+    id: 1,      
+    text: "What is React used for?",      
+    answers: [        
+        { id: 1, text: "Building user interfaces" },        
+        { id: 2, text: "Creating animations" },        
+        { id: 3, text: "Managing databases" },        
+        { id: 4, text: "All of the above" }      
+    ],
+    correctAnswer: 1
     }
   ];
 
@@ -116,9 +127,11 @@ function CourseExample() {
               )}
             </div>
           )}
-          {currentQuestion < questions.length && (
+          {currentQuestion < questions.length ? (
             <button disabled={showSolution ? false : true} onClick={handleNextQuestionClicked}>Next Question</button>
-          )}
+          )
+            : (<h2>Go Back</h2>)
+          }
             <div>
               <p>Your score is: {score} </p>
             </div>
