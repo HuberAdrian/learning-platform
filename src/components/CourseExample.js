@@ -79,6 +79,10 @@ function CourseExample() {
     setShowSolution(false);
   }
 
+  function handleFinishCourseClicked() {
+    // Do something else
+  }
+
   return (
     <div className="Course">
         <div className="Course-header">
@@ -130,7 +134,7 @@ function CourseExample() {
           {currentQuestion < questions.length ? (
             <button disabled={showSolution ? false : true} onClick={handleNextQuestionClicked}>Next Question</button>
           )
-            : (<h2>Go Back</h2>)
+            : (<button onClick={handleFinishCourseClicked} > Kurs beenden </button>)
           }
             <div>
               <p>Your score is: {score} </p>
