@@ -104,7 +104,7 @@ function CourseExample() {
           </form>
           {selectedAnswer && (
             <div>
-              <button onClick={handleSolutionClicked}>See Solution</button>
+              <button disabled={showSolution} onClick={handleSolutionClicked}>See Solution</button>
               {showSolution && (
                 <div>
                   {selectedAnswer == questions[currentQuestion - 1].correctAnswer ? (
@@ -119,11 +119,9 @@ function CourseExample() {
           {currentQuestion < questions.length && (
             <button disabled={showSolution ? false : true} onClick={handleNextQuestionClicked}>Next Question</button>
           )}
-          {currentQuestion == questions.length && (
             <div>
-              <p>Your score is: {score}</p>
+              <p>Your score is: {score} </p>
             </div>
-          )}
         </div>
       )}
     </div>
