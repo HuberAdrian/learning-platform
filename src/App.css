@@ -240,7 +240,7 @@
 }
 
 .home-text {
-  margin: 0 0 500px; /* This is to push the text down while testing */
+  margin: 0 0 120px; /* This is to push the text down while testing */
 }
 
 .home-text {
@@ -269,6 +269,7 @@
   padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .home-buttons button:hover {
@@ -277,6 +278,7 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  border: 1px solid black;
 }
 
 /* make the home page responsive */
