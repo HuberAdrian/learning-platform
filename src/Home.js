@@ -6,6 +6,8 @@ import Courses from './Courses'
 // import About from './About'
 import Content from './Content'
 import { Element } from 'react-scroll'
+import problem_solving from './images/problem-solving.gif'
+
 
 function Home() {
 
@@ -18,6 +20,7 @@ function Home() {
                     <p>Learn about mechanical engineering with our courses, projects and quizzes</p>
                     <button className="home-button-test">Testen</button>
                     <button className="home-button-login">Login</button>
+                    <img src={problem_solving} alt="problem solving" />
                 </div>
                 <div className="home-image"></div>
                 <Element name="courses">
