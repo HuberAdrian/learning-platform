@@ -13,25 +13,28 @@ return (<>
     <p>Here you can find a collection of courses the app offers</p>
     <div className='courses-container' >
         <div className='course'>
-          <h2>Math</h2>
+          <h2>Mathe</h2>
         </div>
         <div className='course'>
-          <h2>English</h2>
+          <h2>Physik</h2>
         </div>
         <div className='course'>
-          <h2>Technology</h2>
+          <h2>Technische Kommunikation</h2>
         </div>
         <div className='course'>
-          <h2>Science</h2>
+          <h2>Werkstofftechnik</h2>
         </div>
         <div className='course'>
-          <h2>History</h2>
+          <h2>Maschinenelemente</h2>
         </div>
         <div className='course'>
-          <h2>Art</h2>
+          <h2>Fertigungstechnik</h2>
         </div>
         <div className='course'>
-          <h2>Music</h2>
+          <h2>Automatisierungstechnik</h2>
+        </div>
+        <div className='course'>
+          <h2>Elektrotechnik</h2>
         </div>
   </div>
 </>

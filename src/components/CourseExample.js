@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './CourseExample.css';
+import { useNavigate } from 'react-router-dom';
 
 
 function CourseExample() {
@@ -11,6 +12,9 @@ function CourseExample() {
   const [showSolution, setShowSolution] = useState(false);
   const [score, setScore] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(1);
+
+    // navigation
+    const navigate = useNavigate();
 
   // question declaration
   const explanation = "React is a JavaScript library for building user interfaces. It was developed by Facebook and is often used for building single-page applications and mobile applications.";
@@ -80,16 +84,19 @@ function CourseExample() {
   }
 
   function handleFinishCourseClicked() {
-    // Do something else
+    // go to the result page
+    navigate('/Result');
   }
+
+
 
   return (
     <div className="Course">
         <div className="Course-header">
         {questionVisible ? (
-        <h3>Question</h3>
+        <h3>Frage</h3>
       ) : (
-        <h3>Explanation</h3>
+        <h3>Erklärung</h3>
       )}
         </div>
       {explanationVisible && (
@@ -137,7 +144,7 @@ function CourseExample() {
             : (<button onClick={handleFinishCourseClicked} > Kurs beenden </button>)
           }
             <div>
-              <p>Your score is: {score} </p>
+              <p>Du hast {score} von {questions.length} richtig beantwortet </p>
             </div>
         </div>
       )}
