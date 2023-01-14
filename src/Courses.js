@@ -9,8 +9,10 @@ function Courses(props) {
   // the last course field should show that the user can add a new course
 
 return (<>
-    <h1>Courses</h1>
-    <p>Here you can find a collection of courses the app offers</p>
+    <div className='courses-content' >
+      <h1>Themen der Kurse</h1>
+      <p>Ein Auszug an Themen die metall-ausbildung bietet:</p>
+    </div>
     <div className='courses-container' >
         <div className='course'>
           <h2>Mathe</h2>

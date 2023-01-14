@@ -7,6 +7,8 @@ import Courses from './Courses'
 import Content from './Content'
 import { Element } from 'react-scroll'
 import problem_solving from './images/problem-solving.gif'
+import { useNavigate } from 'react-router-dom'
+import Person from './components/Person';
 
 
 function Home() {
@@ -29,6 +31,7 @@ function Home() {
                 <Element name="courses">
                     <Courses />
                 </Element>
+                <Person goback={false} />
                 <Element name="content">
                     <Content />
                 </Element>

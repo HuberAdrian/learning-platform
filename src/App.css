@@ -239,9 +239,6 @@
   margin: 0 10px;
 }
 
-.home-text {
-  margin: 0 0 120px; /* This is to push the text down while testing */
-}
 
 .home-text {
   display: flex;
@@ -383,6 +380,19 @@
 
 /* ------------------- CSS for Courses ---------------------- */
 
+.courses-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 80px 10px;
+}
+
+.courses-content h1 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
 /* make a grid for the courses */
 .courses-container {
   display: grid;
@@ -421,6 +431,8 @@
   transition: all 0.3s ease-in-out;
   background-color: #61dafb;
 }
+
+
 
 
 /* ------------------- CSS for Content ---------------------- */
@@ -567,6 +579,25 @@ tr:nth-child(even) {
     grid-row: 2;
   }
 }
+
+/* simple animation for the teacher and student cards */
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.test-teacher:hover, .test-student:hover {
+  animation: bounce 0.5s ease-in-out;
+}
+
 
 /* ------------------- CSS for Login ---------------------- */
 
