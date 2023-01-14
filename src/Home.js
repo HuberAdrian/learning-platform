@@ -16,13 +16,16 @@ function Home() {
             <Navbar />
             <div id='start' className="home-container">
                 <div className="home-text">
-                    <h1>Learn Mechanical Engineering</h1>
-                    <p>Learn about mechanical engineering with our courses, projects and quizzes</p>
-                    <button className="home-button-test">Testen</button>
-                    <button className="home-button-login">Login</button>
-                    <img src={problem_solving} alt="problem solving" />
+                    <div className="home-text-wrapper">
+                        <h1>Industriemechaniker online lernen</h1>
+                        <p>Industriemechaniker lernen mit Kursen courses, Simulationen, Tests und Spiele</p>
+                        <div className="home-buttons">
+                            <button className="home-button-test">Testen</button>
+                            <button className="home-button-login">Login</button>
+                        </div>
+                    </div>
+                    <img className='home-image' src={problem_solving} alt="problem solving" />
                 </div>
-                <div className="home-image"></div>
                 <Element name="courses">
                     <Courses />
                 </Element>

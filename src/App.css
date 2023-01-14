@@ -243,32 +243,86 @@
   margin: 0 0 500px; /* This is to push the text down while testing */
 }
 
-.home-text h1 {
+.home-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.home-text-wrapper h1 {
   font-size: 2rem;
   margin: 10px 0;
 }
 
-.home-text button {
+
+.home-buttons button {
   background-color: #61dafb;
-  color: white;
+  color: black;
   border: none;
   border-radius: 10px;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 0 10px;
   cursor: pointer;
 }
 
-.home-text button:hover {
+.home-buttons button:hover {
   background-color: #61dafb;
   color: white;
   border: none;
   border-radius: 10px;
-  padding: 10px;
-  margin: 0 10px;
   cursor: pointer;
 }
 
+/* make the home page responsive */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
 
+  .home-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .home-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+  }
+
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  .home-buttons button {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .home-image {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 
 /* ------------------- CSS for Pricing ---------------------- */
@@ -322,6 +376,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 
 
 /* ------------------- CSS for Courses ---------------------- */
