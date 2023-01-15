@@ -97,10 +97,61 @@
 }
 
 .container-azubi-start p {
-    margin: 0;
-    margin-left: 20px;
+    margin: 0 20px;
     font-size: 18px;
     line-height: 1.33em;
     color: rgba(0,0,0,0.5);
     font-weight: 700;
+}
+
+.azubi-timeline-mid {
+    margin: 0 30px;
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+}
+
+.azubi-timeline-arrow {
+  color: rgba(0,0,0,0.5);
+  font-size: 30px;
+}
+
+/* give the courses in container-azubi-courses a simple animation when the page is loaded */
+
+@keyframes courses {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.azubi-courses {
+  animation: courses 1s ease-in-out;
+}
+
+/* give the courses in container-azubi-courses a simple animation when hovered */
+
+.azubi-courses:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* give the games in container-azubi-games a simple animation when hovered */
+
+.azubi-game:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* give the games in container-azubi-games a simple animation when the page is loaded */
+
+@keyframes games {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

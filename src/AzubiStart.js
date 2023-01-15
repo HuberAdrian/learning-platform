@@ -6,6 +6,7 @@ import NavbarAzubi from './components/NavbarAzubi';
 import CoursePreview from './components/CoursePreview';
 import GamePreview from './components/GamePreview';
 import Footer from './components/Footer';
+import {AiOutlineArrowRight} from 'react-icons/ai';
 
 function Azubi() {
 
@@ -30,7 +31,12 @@ function Azubi() {
           className='azubi-timeline-progressbar'
           />
           <p className='azubi-timeline-start' >Ausbildungsbeginn: 09.09.2019 </p>
-          <p className='azubi-timeline-end' >Nächste Prüfung: Abschlussprüfung Teil II</p>
+          <AiOutlineArrowRight className='azubi-timeline-arrow' />
+          <div className='azubi-timeline-mid' >
+            <p className='azubi-timeline-mid1' >Nächste Prüfung:</p>
+            <p className='azubi-timeline-mid2' >Avschlussprüfung Teil II</p>
+          </div>
+          <AiOutlineArrowRight className='azubi-timeline-arrow' />
           <p className='azubi-timeline-end' >Ausbildungsende: 28.02.2023</p>
       </div>
       <h2>Anstehende Prüfungen</h2>
