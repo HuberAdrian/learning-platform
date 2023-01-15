@@ -20,23 +20,18 @@ function Azubi() {
     <NavbarAzubi />
     <div className='container-azubi-start' >
       <h1>Startseite Azubi</h1>
-        <h2 className='azubi-timeline-header' >Timeline</h2>
+        <h2 className='azubi-timeline-header' >Übersicht</h2>
         <div className='container-azubi-timeline' >
-          <p className='azubi-timeline-start' >Start </p>
           <ProgressBar
           width="400px"
           height="10px"
-          rect
-          fontColor="gray"
-          percentage="70"
-          rectPadding="1px"
-          rectBorderRadius="20px"
-          trackPathColor="transparent"
-          bgColor="#333333"
-          trackBorderColor="grey"
+          trackWidth="13"
+          percentage="83"
           className='azubi-timeline-progressbar'
           />
-          <p className='azubi-timeline-end' >Abschlussprüfung Teil II</p>
+          <p className='azubi-timeline-start' >Ausbildungsbeginn: 09.09.2019 </p>
+          <p className='azubi-timeline-end' >Nächste Prüfung: Abschlussprüfung Teil II</p>
+          <p className='azubi-timeline-end' >Ausbildungsende: 28.02.2023</p>
       </div>
       <h2>Anstehende Prüfungen</h2>
       <div className='container-azubi-tasks' >
