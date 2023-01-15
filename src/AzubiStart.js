@@ -23,6 +23,7 @@ function Azubi() {
       <h1>Startseite Azubi</h1>
         <h2 className='azubi-timeline-header' >Übersicht</h2>
         <div className='container-azubi-timeline' >
+          <div className='azubi-timeline' >
           <ProgressBar
           width="400px"
           height="10px"
@@ -30,6 +31,8 @@ function Azubi() {
           percentage="83"
           className='azubi-timeline-progressbar'
           />
+          <p className='azubi-timeline-progress' >...der Ausbildunng absolviert!</p>
+          </div>
           <p className='azubi-timeline-start' >Ausbildungsbeginn: 09.09.2019 </p>
           <AiOutlineArrowRight className='azubi-timeline-arrow' />
           <div className='azubi-timeline-mid' >
@@ -39,7 +42,6 @@ function Azubi() {
           <AiOutlineArrowRight className='azubi-timeline-arrow' />
           <p className='azubi-timeline-end' >Ausbildungsende: 28.02.2023</p>
       </div>
-      <h2>Anstehende Prüfungen</h2>
       <div className='container-azubi-tasks' >
       </div>
       <h2>Empfohlene Kurse</h2>

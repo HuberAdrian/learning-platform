@@ -155,3 +155,30 @@
     transform: scale(1);
   }
 }
+
+/* make a border around azubi-timeline-mid so the focus of the user is on the timeline */
+
+.azubi-timeline-mid {
+  border: 1px solid black;
+  border-color: rgba(0,0,0,0.2);
+  border-radius: 15px;
+  /* center content in the div */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1),
+              0 4px 12px rgba(0,0,0,0.1) inset;
+  padding: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.azubi-timeline-mid p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: rgba(0,0,0);
+  font-weight: 700;
+}
