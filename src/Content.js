@@ -71,7 +71,12 @@ function Content() {
             <th className='table-header' >andere Plattformen</th>
         </tr>
         <tr>
-            <td >Responsive Design</td>
+            <td >Eigene Inhalte hochladen</td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
+        </tr>
+        <tr>
+            <td >Statistiken über einzelne Azubis</td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
         </tr>
@@ -81,12 +86,7 @@ function Content() {
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
         </tr>
         <tr>
-            <td >Offlinefähig</td>
-            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
-            <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
-        </tr>
-        <tr>
-            <td >Offlinefähig</td>
+            <td >Chatfunktion</td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
             <td ><IoIosCheckmarkCircle className='ioIosCheckmarkCircle' /></td>
         </tr>
