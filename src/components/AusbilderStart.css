@@ -124,6 +124,7 @@
     flex-direction: row;
     align-items: center;
     max-width: 1200px;
+    width: 100%;
 }
 
 /* make elements in the student-container take the same width */
@@ -137,8 +138,8 @@
 .student-container {
     border: 1px solid #ddd;
     border-radius: 20px;
-    margin: 20px auto;
-    padding: 10px;
+    margin: 10px auto;
+    padding: 5px;
 }
 
 /* animate the student-container that the elements appear one after another */
@@ -148,6 +149,26 @@
 }
 
 
+/* design the select-class button that it is on the left side with a margin of 20px and a border-radius */
 
+.select-class {
+    margin-left: 20px;
+    border-radius: 4px;
+}
 
+.azubi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
 
+.ausbilder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import CreateCourse from './components/CreateCourse'
 import './components/AusbilderStart.css'
 import ButtonGoBack from './components/ButtonGoBack'
@@ -7,6 +7,8 @@ import Footer from './components/Footer';
 import NavbarAzubi from './components/NavbarAzubi'
 
 function Ausbilder() {
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const students = [
     { name: "Max Mustermann", online: true, score: "87" },
@@ -24,13 +26,25 @@ function Ausbilder() {
   return (
     <>
     <NavbarAzubi />
+
+    <div className='ausbilder-container' >
+    <h1 className='azubi-title'>Ausbilder</h1>
     <div>
+      <button className='select-class-btn' onClick={() => setIsOpen(!isOpen)}>Toggle Dropdown</button>
+      {isOpen && (
+        <ul>
+          <li>1. Lehrjahr</li>
+          <li>2. Lehrjahr</li>
+          <li>3. Lehrjahr</li>
+          <li>4. Lehrjahr</li>
+        </ul>
+      )}
+    </div >
       {students.map((student, index) => (
         <Student key={index} name={student.name} online={student.online} score={student.score} />
       ))}
     </div>
     <ButtonGoBack />
-    <div>Ausbilder</div>
     <CreateCourse />
     <Footer />
     </>
@@ -38,3 +52,6 @@ function Ausbilder() {
 }
 
 export default Ausbilder
+
+
+// create a toggle buttton to switch between the classes of the students
