@@ -29,14 +29,16 @@ function Ausbilder() {
 
     <div className='ausbilder-container' >
     <h1 className='azubi-title'>Ausbilder</h1>
+
+    <h2 className='azubi-subtitle'>Übersicht 4. Lehrjahr</h2>
     <div>
-      <button className='select-class-btn' onClick={() => setIsOpen(!isOpen)}>Toggle Dropdown</button>
+      <button className='select-class-btn' onClick={() => setIsOpen(!isOpen)}>Lehrjahr wählen</button>
       {isOpen && (
-        <ul>
-          <li>1. Lehrjahr</li>
-          <li>2. Lehrjahr</li>
-          <li>3. Lehrjahr</li>
-          <li>4. Lehrjahr</li>
+        <ul className='wahl-lehrjahr' >
+          <li className='wahl-lehrjahr-li' >1. Lehrjahr</li>
+          <li className='wahl-lehrjahr-li' >2. Lehrjahr</li>
+          <li className='wahl-lehrjahr-li' >3. Lehrjahr</li>
+          <li className='wahl-lehrjahr-li' >4. Lehrjahr</li>
         </ul>
       )}
     </div >
