@@ -8,6 +8,11 @@ import NavbarAzubi from './components/NavbarAzubi'
 
 function Ausbilder() {
 
+   // scroll to top of page when component mounts
+   React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
 
   const students = [
