@@ -49,7 +49,7 @@ function Azubi() {
     <Stack spacing={2} sx={{ width: '100%' }}>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleSnackbarClose}>
         <Alert onClose={handleSnackbarClose} severity="info" sx={{ width: '100%' }}>
-          Function nicht verfügbar. Bitte versuchen Sie es später noch einmal.
+          Funktion nicht verfügbar. Bitte versuchen Sie es später noch einmal.
         </Alert>
       </Snackbar>
     </Stack>
