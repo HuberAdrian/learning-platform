@@ -1,0 +1,117 @@
+.course-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .course-form label {
+    margin: 12px 0;
+  }
+  
+  .course-form textarea {
+    width: 500px;
+    height: 100px;
+    padding: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 500px;
+    margin-bottom: 12px;
+  }
+  
+  .answer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 500px;
+    margin-bottom: 12px;
+  }
+  
+  .remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+  }
+  
+  .add-btn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 12px;
+  }
+
+    .course-form input {
+        width: 500px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    .course-form button {
+        width: 500px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+    
+    .course-form select {
+        width: 500px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    .course-form textarea {
+        width: 500px;
+        height: 100px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+
+    .course-form label {
+        margin: 12px 0;
+    }
+
+    .course-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-form input {
+        width: 500px;
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+  
+    /* design the submit button */
+
+    .sub-btn {
+        width: 500px;
+        padding: 8px;
+        margin-bottom: 12px;
+        background-color: #61dafb;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .sub-btn:hover {
+        background-color: #45a9b8;
+    }
+
+
+    /* give the form a background color and a border and a border-radius, the container should be centered */
+
+    .container {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    
+    }

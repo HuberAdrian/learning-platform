@@ -154,3 +154,13 @@ function CourseExample() {
 }
 
 export default CourseExample;
+
+
+/* write a funcional component with a form that the user can create a new course with an explanation and multiple questions and answers. The user should be able to add and delete questions and answers. The user should be able to save the course and then see the course in the list of courses. */
+
+function CourseForm() {
+  
+  const [explanation, setExplanation] = useState('');
+  const [questions, setQuestions] = useState([{ id: 1, text: '', answers: [{ id: 1, text: '' }, { id: 2, text: '' }] }]);
+
+}
