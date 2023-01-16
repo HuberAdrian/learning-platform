@@ -14,47 +14,43 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const FunctionalSnackbar = () => {
+const FunctionalSnackbar = (props) => {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
-
-  const handleClick = () => {
-    setOpen(true);
-  };
 
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
     }
-    setOpen(false);
+    props.setOpen(false);
   };
 
   return (
     <div className={classes.root}>
-      <button onClick={handleClick}>Button not available</button>
-      <Snackbar
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "center",
-        }}
-        open={open}
-        autoHideDuration={3000}
-        onClose={handleClose}
-        message="This button is not available yet. Please try again later."
-        action={
-          <React.Fragment>
-            <IconButton
-              size="small"
-              aria-label="close"
-              color="inherit"
-              onClick={handleClose}
-            >
-              <CloseIcon fontSize="small" />
-            </IconButton>
-          </React.Fragment>
-        }
-        className="snackbar"
-      />
+      {props.open && (
+        <Snackbar
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+          open={props.open}
+          autoHideDuration={3000}
+          onClose={handleClose}
+          message="This button is not available yet. Please try again later."
+          action={
+            <React.Fragment>
+              <IconButton
+                size="small"
+                aria-label="close"
+                color="inherit"
+                onClick={handleClose}
+              >
+                <CloseIcon fontSize="small" />
+              </IconButton>
+            </React.Fragment>
+          }
+          className="snackbar"
+        />
+      )}
     </div>
   );
 };
