@@ -172,3 +172,44 @@
     width: 100%;
     margin-left: auto;
 }
+
+/* design the select-class button so it looks better */
+
+.select-class-btn {
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #61dafb;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.select-class-btn:hover {
+    background-color: #45a9b8;
+}
+
+/* design the ul list so it looks better */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* design the ul list so each element looks like a button with a hover effect */
+
+ul li {
+    background-color: #61dafb;
+    color: #fff;
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    max-width: 300px;
+}
+
+ul li:hover {
+    background-color: #45a9b8;
+}
+
