@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@mui/styles';
 import Snackbar from "@material-ui/core/Snackbar";
-import IconButton from "@material-ui/core/IconButton";
+import IconButton from '@mui/material/IconButton';
 import CloseIcon from "@material-ui/icons/Close";
 import "./snackbar.css";
 

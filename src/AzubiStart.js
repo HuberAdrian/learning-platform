@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ButtonGoBack from './components/ButtonGoBack'
 import ProgressBar from 'react-animated-progress-bar';
 import './AzubiStart.css'
@@ -7,6 +7,10 @@ import CoursePreview from './components/CoursePreview';
 import GamePreview from './components/GamePreview';
 import Footer from './components/Footer';
 import {AiOutlineArrowRight} from 'react-icons/ai';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 
 function Azubi() {
 
@@ -14,10 +18,36 @@ function Azubi() {
   // the timeline should be animated and show the progress of the student from the start to the end of the college (maybe with a progress bar) 
   // make also a field where he can join group games with other students to improve his skills and knowledge
 
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+
+  const [open, setOpen] = useState(false);
+
+  const handleSnackbarClick = () => {
+    setOpen(true);
+  };
+
+  const handleSnackbarClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setOpen(false);
+  };
+
+
   return (
     <>
     <div className='color' >
     <ButtonGoBack />
+    <Stack spacing={2} sx={{ width: '100%' }}>
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleSnackbarClose}>
+        <Alert onClose={handleSnackbarClose} severity="info" sx={{ width: '100%' }}>
+          Function nicht verfügbar. Bitte versuchen Sie es später noch einmal.
+        </Alert>
+      </Snackbar>
+    </Stack>
     <NavbarAzubi />
     <div className='container-azubi-start' >
       <h1>Startseite Azubi</h1>
@@ -53,7 +83,7 @@ function Azubi() {
         <CoursePreview />
       </div>
       <h2>Gruppenspiele</h2>
-      <div className='container-azubi-games' >
+      <div className='container-azubi-games' onClick={handleSnackbarClick} >
         <GamePreview />
         <GamePreview />
       </div>
