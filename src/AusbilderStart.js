@@ -3,6 +3,8 @@ import CreateCourse from './components/CreateCourse'
 import './components/AusbilderStart.css'
 import ButtonGoBack from './components/ButtonGoBack'
 import Student from './components/Student'
+import Footer from './components/Footer';
+import NavbarAzubi from './components/NavbarAzubi'
 
 function Ausbilder() {
 
@@ -21,6 +23,7 @@ function Ausbilder() {
 
   return (
     <>
+    <NavbarAzubi />
     <div>
       {students.map((student, index) => (
         <Student key={index} name={student.name} online={student.online} score={student.score} />
@@ -29,6 +32,7 @@ function Ausbilder() {
     <ButtonGoBack />
     <div>Ausbilder</div>
     <CreateCourse />
+    <Footer />
     </>
   )
 }
