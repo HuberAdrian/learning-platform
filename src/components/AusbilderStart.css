@@ -119,4 +119,35 @@
 
     /*--------CSS for Students --------*/
 
-    
+.student-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+}
+
+/* make elements in the student-container take the same width */
+
+.student-container > * {
+    flex: 1;
+}
+
+/* give the student-container a border and a border-radius */
+
+.student-container {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* animate the student-container that the elements appear one after another */
+
+.student-container {
+    animation: slideIn 1s ease-in-out;
+}
+
+
+
+
+

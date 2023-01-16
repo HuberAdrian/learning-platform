@@ -9,7 +9,7 @@ function Ausbilder() {
   const students = [
     { name: "Max Mustermann", online: true, score: "87" },
     { name: "Maria Müller", online: false, score: "92" },
-    { name: "Hans Hofmann", online: true, score: "75" },
+    { name: "Hans Hofmann", online: true, score: "33" },
     { name: "Andrea Schmidt", online: true, score: "83" },
     { name: "Sophie Bauer", online: false, score: "90" },
     { name: "Stefanie Keller", online: true, score: "88" },

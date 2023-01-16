@@ -11,7 +11,7 @@ const Student = ({ name, online, score }) => {
 
   return (
     <div className='student-container' >
-      <h3>{name}</h3>
+      <h3 className='student-content' >{name}</h3>
       <p>Online Status: {status}</p>
       <ProgressBar width="150" trackWidth="13" height="150" percentage={score} />
     </div>
