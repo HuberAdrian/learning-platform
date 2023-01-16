@@ -36,6 +36,11 @@ function Azubi() {
     setOpen(false);
   };
 
+  // scroll to top of page when component mounts
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <>
