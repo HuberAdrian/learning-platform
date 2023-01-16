@@ -67,10 +67,10 @@ function CreateCourse() {
                 <h3> Antwort {answerIndex + 1}: </h3>
                 <input name="text" value={answer.text} onChange={(e) => handleAnswerChange(e, questionIndex, answerIndex)} />
               </label>
-              <button className="remove-btn" type="button" onClick={() => removeAnswer(questionIndex, answerIndex)}>Remove Answer</button>
+              <button className="remove-btn" type="button" onClick={() => removeAnswer(questionIndex, answerIndex)}>Antwort löschen</button>
             </div>
           ))}
-          <button className="add-btn" type="button" onClick={() => addAnswer(questionIndex)}>Add Answer</button>
+          <button className="add-btn" type="button" onClick={() => addAnswer(questionIndex)}>Antwort hinzufügen</button>
           <label>
             <h3>richtige Antwort: </h3>
             <input
@@ -82,7 +82,7 @@ function CreateCourse() {
           </div>
         ))}
         <button className="add-btn" type="button" onClick={addQuestion}>Add Question</button>
-        <button className="sub-btn" type="submit">Save Course</button>
+        <button className="sub-btn" type="submit">Kurs testen</button>
       </form>
     );
 
