@@ -57,6 +57,7 @@ function CreateCourse() {
       {course.questions.map((question, questionIndex) => (
         <div className="question-container" key={questionIndex}>
           <label>
+            <h3>------------------------</h3>
             <h3>Frage {questionIndex + 1}: </h3>
             <input name="text" value={question.text} onChange={(e) => handleQuestionChange(e, questionIndex)} />
           </label>
@@ -81,7 +82,7 @@ function CreateCourse() {
             </label>
           </div>
         ))}
-        <button className="add-btn" type="button" onClick={addQuestion}>Add Question</button>
+        <button className="add-btn" type="button" onClick={addQuestion}>Frage hinzufügen</button>
         <button className="sub-btn" type="submit">Kurs testen</button>
       </form>
     );
