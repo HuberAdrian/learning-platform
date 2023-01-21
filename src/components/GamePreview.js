@@ -1,11 +1,11 @@
 import React from 'react'
 
-function GamePreview() {
+function GamePreview({title, description}) {
 
   return (
     <div className='azubi-game' >
-          <h3>Kurs 1</h3>
-          <p>bla bla bla</p>
+          <h3>{title}</h3>
+          <p>{description}</p>
         </div>
   )
 }
