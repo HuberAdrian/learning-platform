@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom';
+// import images 
 
 function CoursePreview(props) {
   const { link, courseName, image, description } = props;
