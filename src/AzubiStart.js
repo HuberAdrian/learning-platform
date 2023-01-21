@@ -82,10 +82,10 @@ function Azubi() {
       <h2>Empfohlene Kurse</h2>
       <p>Für deine nächste Prüfung</p>
       <div className='container-azubi-courses' >
-        <CoursePreview />
-        <CoursePreview />
-        <CoursePreview />
-        <CoursePreview />
+        <CoursePreview courseName ={"Technische Mechanik"} bgColor={"blue"} description={"Drehrichtung von Zahnräder"} />
+        <CoursePreview courseName ={"Mathematik"} bgColor={"green"} description={"Differentialrechnung"} />
+        <CoursePreview courseName ={"Elektrotechnik"} bgColor={"red"} description={"Elektrische Felder"} />
+        <CoursePreview courseName ={"Physik"} bgColor={"yellow"} description={"Schwingungen"} />
       </div>
       <h2>Gruppenspiele</h2>
       <div className='container-azubi-games' onClick={handleSnackbarClick} >
