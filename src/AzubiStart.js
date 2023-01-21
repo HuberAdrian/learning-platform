@@ -89,8 +89,8 @@ function Azubi() {
       </div>
       <h2>Gruppenspiele</h2>
       <div className='container-azubi-games' onClick={handleSnackbarClick} >
-        <GamePreview />
-        <GamePreview />
+        <GamePreview title={"Tabellenbuch Finder"} description={"Teste deinen Umgang mit dem Tabellenbuch"} />
+        <GamePreview title={"+ weitere Spiele in Planung"} description={""} />
       </div>
       <h2>Sonstige Kurse</h2>
       <p>Eine Auswahl an Kursen</p>
