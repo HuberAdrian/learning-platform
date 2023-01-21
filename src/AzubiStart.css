@@ -65,6 +65,34 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1)
 }
 
+
+.azubi-courses.bg-blue {
+  background-color: blue;
+}
+
+.azubi-courses.bg-green {
+  background-color: green;
+}
+
+.azubi-courses.bg-yellow {
+  background-color: yellow;
+}
+
+.azubi-courses.bg-red {
+  background-color: red;
+}
+
+.course-name {
+  color: white;
+  text-shadow: 1px solid white;
+  font-size: 22px;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 1px 1px #000;
+}
+
+
+
 .container-azubi-games {
   display: flex;
   flex-direction: column;
@@ -182,4 +210,48 @@
   color: rgba(0,0,0);
   font-weight: 700;
 }
+
+
+
+
+
+/* --------CSS for Games -------- */
+
+.azubi-game {
+  background-color: #61dafb;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  margin: 10px auto;
+  padding: 5px;
+  width: 100%;
+}
+
+.azubi-game h3 {
+  color: #ff0000;
+  margin: 10px auto;
+  padding: 5px;
+  text-shadow: 3px 1px 1px #fff;
+}
+
+.azubi-game h3:hover {
+  color: #ff0000;
+  margin: 10px auto;
+  padding: 5px;
+  text-shadow: 3px 1px 1px #fff;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.azubi-game h3 {
+  animation: slideIn 1.5s ease-in-out;
+}
+
+
 

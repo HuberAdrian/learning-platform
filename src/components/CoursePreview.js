@@ -14,3 +14,5 @@ return (
   </Link>
 )
 }
+
+export default CoursePreview
