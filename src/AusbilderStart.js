@@ -5,6 +5,12 @@ import ButtonGoBack from './components/ButtonGoBack'
 import Student from './components/Student'
 import Footer from './components/Footer';
 import NavbarAzubi from './components/NavbarAzubi'
+import CoursePreview from './components/CoursePreview';
+// import images
+import math from './images/mathematik.png';
+import technical_mechanic from './images/technische-mechanik.png';
+import electronic from './images/elektrotechink.png';
+import physic from './images/physik.png';
 
 function Ausbilder() {
 
@@ -50,9 +56,18 @@ function Ausbilder() {
       {students.map((student, index) => (
         <Student key={index} name={student.name} online={student.online} score={student.score} />
       ))}
-    </div>
+
     <ButtonGoBack />
+    <h2 className='azubi-subtitle'>Kurs bearbeiten</h2>
+      <div className='container-azubi-courses' >
+        <CoursePreview courseName ={"Technische Mechanik"} description={"Drehrichtung von Zahnräder"} image={technical_mechanic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Mathematik"} description={"Differentialrechnung"} image={math} link='/KursBsp1' />
+        <CoursePreview courseName ={"Elektrotechnik"}  description={"Elektrische Felder"} image={electronic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Physik"} description={"Schwingungen"} image={physic} link='/KursBsp1' />
+      </div>
+    <h2 className='azubi-subtitle'>Kurs erstellen</h2>
     <CreateCourse />
+    </div>
     <Footer />
     </>
   )
