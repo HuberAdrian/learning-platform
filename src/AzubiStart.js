@@ -87,10 +87,10 @@ function Azubi() {
       <h2>Empfohlene Kurse</h2>
       <p>Für deine nächste Prüfung</p>
       <div className='container-azubi-courses' >
-        <CoursePreview courseName ={"Technische Mechanik"} description={"Drehrichtung von Zahnräder"} image={technical_mechanic} />
-        <CoursePreview courseName ={"Mathematik"} description={"Differentialrechnung"} image={math} />
-        <CoursePreview courseName ={"Elektrotechnik"}  description={"Elektrische Felder"} image={electronic} />
-        <CoursePreview courseName ={"Physik"} description={"Schwingungen"} image={physic} />
+        <CoursePreview courseName ={"Technische Mechanik"} description={"Drehrichtung von Zahnräder"} image={technical_mechanic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Mathematik"} description={"Differentialrechnung"} image={math} link='/KursBsp1' />
+        <CoursePreview courseName ={"Elektrotechnik"}  description={"Elektrische Felder"} image={electronic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Physik"} description={"Schwingungen"} image={physic} link='/KursBsp1' />
       </div>
       <h2>Gruppenspiele</h2>
       <div className='container-azubi-games' onClick={handleSnackbarClick} >
@@ -100,11 +100,10 @@ function Azubi() {
       <h2>Sonstige Kurse</h2>
       <p>Eine Auswahl an Kursen</p>
       <div className='container-azubi-courses' >
-        <CoursePreview link='/KursBsp1' />
-        <CoursePreview />
-        <CoursePreview />
-        <CoursePreview />
-        <CoursePreview />
+        <CoursePreview courseName ={"Elektrotechnik"}  description={"Elektrische Felder"} image={electronic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Technische Mechanik"} description={"Drehrichtung von Zahnräder"} image={technical_mechanic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Physik"} description={"Schwingungen"} image={physic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Mathematik"} description={"Differentialrechnung"} image={math} link='/KursBsp1' />
         </div>
     </div>
     <Footer />

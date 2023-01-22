@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './CourseExample.css';
 import { useNavigate } from 'react-router-dom';
+import frage1 from '../images/frage1.png';
+import frage2 from '../images/frage2.png';
 
 
 function CourseExample() {
@@ -17,37 +19,39 @@ function CourseExample() {
     const navigate = useNavigate();
 
   // question declaration
-  const explanation = "React is a JavaScript library for building user interfaces. It was developed by Facebook and is often used for building single-page applications and mobile applications.";
+  const explanation = "In den folgenden Fragen werden Sie aufgefordert, die richtige Drehrichtung des angegeben Zahnrads auszuwählen.";
   const questions = [    {      
     id: 1,      
-    text: "What is React used for?",      
+    text: "Welche Aussage ist richtig?",
+    image: frage1,
     answers: [        
-        { id: 1, text: "Building user interfaces" },        
-        { id: 2, text: "Creating animations" },        
-        { id: 3, text: "Managing databases" },        
-        { id: 4, text: "All of the above" }      
+        { id: 1, text: "Rad 2 dreht sich schneller als Rad 1 und mit dem Uhrzeigersinn" },        
+        { id: 2, text: "Rad 2 dreht sich langsamer als Rad 1 und gegen den Uhrzeigersinn" },        
+        { id: 3, text: "Rad 1 dreht sich langsamer als Rad 2" },        
+        { id: 4, text: "Rad 2 dreht sich so schnell wie Rad 1 und mit dem Uhrzeigersinn." }      
     ],
     correctAnswer: 1
     },
     {
       id: 2,
-      text: "What is a single-page application?",
+      text: "Welche Räder drehen in dieselbe Richtung wie Rad 1?",
+      image: frage2,
       answers: [
-        { id: 1, text: "An application that loads a single HTML page and all necessary assets upfront" },
-        { id: 2, text: "An application that loads a new HTML page for each view or action" },
-        { id: 3, text: "An application that loads all necessary assets on the first page load and then updates the page dynamically as the user interacts with it" },
-        { id: 4, text: "An application that loads the necessary assets for each view or action as the user navigates to them" }
+        { id: 1, text: "3, 5 und 7" },
+        { id: 2, text: "6 und 4" },
+        { id: 3, text: "3 und 5" },
+        { id: 4, text: "Das System funktioniert nicht" }
       ],
-      correctAnswer: 3
+      correctAnswer: 4
     },
     {
     id: 1,      
-    text: "What is React used for?",      
+    text: "Welche Aussage ist richtig?",
     answers: [        
-        { id: 1, text: "Building user interfaces" },        
-        { id: 2, text: "Creating animations" },        
-        { id: 3, text: "Managing databases" },        
-        { id: 4, text: "All of the above" }      
+        { id: 1, text: "Die Winkeländerung bei aneinander liegenden Zahnrädern ist gleich" },        
+        { id: 2, text: "Die Übersetzung ist das Verhältnis der Anzahl der Zähne von zwei Zahnräder" },        
+        { id: 3, text: "Die Übersetzung ist das Verhältnis der Drehmomente von zwei Zahnräder" },        
+        { id: 4, text: "Alle genannten Aussagen sind richtig" }      
     ],
     correctAnswer: 1
     }
@@ -108,6 +112,7 @@ function CourseExample() {
       {questionVisible && (
         <div>
           <p>{questions[currentQuestion - 1].text}</p>
+          <img src={questions[currentQuestion - 1].image} alt="Frage" className='question-image' />
           <form>
             {questions[currentQuestion - 1].answers.map(answer => (
               <div key={answer.id} >
@@ -154,13 +159,3 @@ function CourseExample() {
 }
 
 export default CourseExample;
-
-
-/* write a funcional component with a form that the user can create a new course with an explanation and multiple questions and answers. The user should be able to add and delete questions and answers. The user should be able to save the course and then see the course in the list of courses. */
-
-function CourseForm() {
-  
-  const [explanation, setExplanation] = useState('');
-  const [questions, setQuestions] = useState([{ id: 1, text: '', answers: [{ id: 1, text: '' }, { id: 2, text: '' }] }]);
-
-}

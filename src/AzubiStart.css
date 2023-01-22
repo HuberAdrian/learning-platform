@@ -13,6 +13,7 @@
   background-color: #f8f8f8;
 }
 
+
 /* max-width for the container-azubi-start should be the screen width */
 
 /* the h2 should be aligned on the left side */
@@ -30,6 +31,7 @@
     margin: 20px auto;
     overflow-x: scroll;
     overflow-y: auto;
+    margin-bottom: 90px;
   }
 }
 
@@ -84,8 +86,7 @@
   text-align: center;
 }
 
-
-
+/* ------------ CSS Games ------------ */
 
 .container-azubi-games {
   display: flex;
