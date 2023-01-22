@@ -37,10 +37,18 @@ function Ausbilder() {
   return (
     <>
     <NavbarAzubi />
-
     <div className='ausbilder-container' >
     <h1 className='azubi-title'>Ausbilder</h1>
-
+    <ButtonGoBack />
+    <h2 className='azubi-subtitle'>Kurs bearbeiten</h2>
+      <div className='container-azubi-courses' >
+        <CoursePreview courseName ={"Technische Mechanik"} description={"Drehrichtung von Zahnräder"} image={technical_mechanic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Mathematik"} description={"Differentialrechnung"} image={math} link='/KursBsp1' />
+        <CoursePreview courseName ={"Elektrotechnik"}  description={"Elektrische Felder"} image={electronic} link='/KursBsp1' />
+        <CoursePreview courseName ={"Physik"} description={"Schwingungen"} image={physic} link='/KursBsp1' />
+      </div>
+    <h2 className='azubi-subtitle'>Kurs erstellen</h2>
+    <CreateCourse />
     <h2 className='azubi-subtitle'>Übersicht 4. Lehrjahr</h2>
     <div>
       <button className='select-class-btn' onClick={() => setIsOpen(!isOpen)}>Lehrjahr wählen</button>
@@ -57,16 +65,6 @@ function Ausbilder() {
         <Student key={index} name={student.name} online={student.online} score={student.score} />
       ))}
 
-    <ButtonGoBack />
-    <h2 className='azubi-subtitle'>Kurs bearbeiten</h2>
-      <div className='container-azubi-courses' >
-        <CoursePreview courseName ={"Technische Mechanik"} description={"Drehrichtung von Zahnräder"} image={technical_mechanic} link='/KursBsp1' />
-        <CoursePreview courseName ={"Mathematik"} description={"Differentialrechnung"} image={math} link='/KursBsp1' />
-        <CoursePreview courseName ={"Elektrotechnik"}  description={"Elektrische Felder"} image={electronic} link='/KursBsp1' />
-        <CoursePreview courseName ={"Physik"} description={"Schwingungen"} image={physic} link='/KursBsp1' />
-      </div>
-    <h2 className='azubi-subtitle'>Kurs erstellen</h2>
-    <CreateCourse />
     </div>
     <Footer />
     </>
