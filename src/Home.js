@@ -13,6 +13,16 @@ import Person from './components/Person';
 
 function Home() {
 
+    const navigate = useNavigate();
+
+    function handleTest() {
+        navigate('/person')
+    }
+
+    function handleLogin() {
+        navigate('/login')
+    }
+
     return (
         <div> 
             <Navbar />
@@ -22,8 +32,8 @@ function Home() {
                         <h1>Industriemechaniker online lernen</h1>
                         <p>Industriemechaniker lernen mit Kursen courses, Simulationen, Tests und Spiele</p>
                         <div className="home-buttons">
-                            <button className="home-button-test">Testen</button>
-                            <button className="home-button-login">Login</button>
+                            <button onClick={handleTest} className="home-button-test">Testen</button>
+                            <button onClick={handleLogin} className="home-button-login">Login</button>
                         </div>
                     </div>
                     <img className='home-image' src={problem_solving} alt="problem solving" />
