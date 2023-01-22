@@ -53,7 +53,7 @@ function CourseExample() {
         { id: 3, text: "Die Übersetzung ist das Verhältnis der Drehmomente von zwei Zahnräder" },        
         { id: 4, text: "Alle genannten Aussagen sind richtig" }      
     ],
-    correctAnswer: 1
+    correctAnswer: 4
     }
   ];
 
@@ -89,7 +89,7 @@ function CourseExample() {
 
   function handleFinishCourseClicked() {
     // go to the result page
-    navigate('/Result');
+    navigate('/');
   }
 
 
@@ -106,13 +106,14 @@ function CourseExample() {
       {explanationVisible && (
         <div>
           <p>{explanation}</p>
-          <button className='btn-action' onClick={handleExplanationClicked}>Continue</button>
+          <button className='btn-action' onClick={handleExplanationClicked}>Weiter</button>
         </div>
       )}
       {questionVisible && (
         <div>
           <p>{questions[currentQuestion - 1].text}</p>
-          <img src={questions[currentQuestion - 1].image} alt="Frage" className='question-image' />
+          {questions[currentQuestion - 1].image &&
+          <img src={questions[currentQuestion - 1].image} alt="Frage" className='question-image' /> }
           <form>
             {questions[currentQuestion - 1].answers.map(answer => (
               <div key={answer.id} >
@@ -131,7 +132,7 @@ function CourseExample() {
           </form>
           {selectedAnswer && (
             <div>
-              <button disabled={showSolution} onClick={handleSolutionClicked}>See Solution</button>
+              <button disabled={showSolution} onClick={handleSolutionClicked}>Lösung anzeigen</button>
               {showSolution && (
                 <div>
                   {selectedAnswer == questions[currentQuestion - 1].correctAnswer ? (
