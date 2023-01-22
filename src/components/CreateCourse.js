@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import CourseExample from './CourseExample';
 
 function CreateCourse() {
   const [course, setCourse] = useState({
     explanation: "",
     questions: [],
   });
+
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     setCourse({ ...course, [e.target.name]: e.target.value });
@@ -48,8 +51,17 @@ function CreateCourse() {
     }
 
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(course); 
+        setSubmitted(true);
+    }
+
+
+
   return (
-    <form className="course-form container">
+    <>
+    <div className="course-form container">
       <label>
         <h3>Erklärung: </h3>
         <textarea name="explanation" value={course.explanation} onChange={handleChange} />
@@ -83,10 +95,11 @@ function CreateCourse() {
           </div>
         ))}
         <button className="add-btn" type="button" onClick={addQuestion}>Frage hinzufügen</button>
-        <button className="sub-btn" type="submit">Kurs testen</button>
-      </form>
+        <button className="sub-btn" type="button" onClick={handleSubmit} >Kurs testen</button>
+      </div>
+      {submitted && <CourseExample course={course} />}
+    </>
     );
-
     }
 
     export default CreateCourse;

@@ -5,22 +5,22 @@ import frage1 from '../images/frage1.png';
 import frage2 from '../images/frage2.png';
 
 
-function CourseExample() {
+function CourseExample({course}) {
+  console.log(course);
+  let explanation;
+  let questions;
 
-  // states
-  const [explanationVisible, setExplanationVisible] = useState(true);
-  const [questionVisible, setQuestionVisible] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [showSolution, setShowSolution] = useState(false);
-  const [score, setScore] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(1);
+  // assign course data to variables
+  if (course) {
 
-    // navigation
-    const navigate = useNavigate();
+    explanation = course.explanation;
+    questions = course.questions;
 
-  // question declaration
-  const explanation = "In den folgenden Fragen werden Sie aufgefordert, die richtige Drehrichtung des angegeben Zahnrads auszuwählen.";
-  const questions = [    {      
+  }
+  else {
+
+  explanation = "In den folgenden Fragen werden Sie aufgefordert, die richtige Drehrichtung des angegeben Zahnrads auszuwählen.";
+  questions = [    {      
     id: 1,      
     text: "Welche Aussage ist richtig?",
     image: frage1,
@@ -56,6 +56,20 @@ function CourseExample() {
     correctAnswer: 4
     }
   ];
+  }
+
+
+  // states
+  const [explanationVisible, setExplanationVisible] = useState(true);
+  const [questionVisible, setQuestionVisible] = useState(false);
+  const [selectedAnswer, setSelectedAnswer] = useState(null);
+  const [showSolution, setShowSolution] = useState(false);
+  const [score, setScore] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(1);
+
+    // navigation
+    const navigate = useNavigate();
+
 
   function handleAnswerSelect(event) {
     setSelectedAnswer(event.target.value);
